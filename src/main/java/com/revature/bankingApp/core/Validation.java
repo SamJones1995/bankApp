@@ -1,4 +1,4 @@
-package com.revature.bankingApp;
+package com.revature.bankingApp.core;
 
 public class Validation {
 

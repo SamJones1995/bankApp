@@ -26,6 +26,7 @@ public class PassSetup {
 				if (passConfirm.hashCode() == passwordReg.hashCode()) {
 					System.out.println("password confirmed");
 					
+					
 					// write password to DB
 					
 				} if (passConfirm.hashCode() != passwordReg.hashCode()) {

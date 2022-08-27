@@ -13,7 +13,7 @@ public class Util {
 	    {
 		 	String regex = "^(?=.*\\d)(?=.*[a-z])(?=.*[A-Z])(?=.*[@#$%]).{8,20}$";
 	        IntStream passWee = passwordReg.chars();
-	        System.out.println(passWee.toString());
+//	        System.out.println(passWee.toString());
 	        Pattern pattern = Pattern.compile(regex);
 	        Matcher matcher = pattern.matcher(passwordReg);
 	        return matcher.matches();
@@ -23,7 +23,7 @@ public class Util {
 	    {
 		 	String regex = "^(?=.*\\d)(?=.*[a-z])(?=.*[A-Z])$";
 	        IntStream passWee = usernameReg.chars();
-	        System.out.println(passWee.toString());
+	       
 	        Pattern pattern = Pattern.compile(regex);
 	        Matcher matcher = pattern.matcher(usernameReg);
 	        return matcher.matches();

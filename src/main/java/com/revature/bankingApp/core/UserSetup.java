@@ -7,24 +7,30 @@ import com.revature.bankingApp.core.util.Util;
 
 public class UserSetup {
 	
-	private String username;
 	
-	public void userSetup() {
+	
+	public Boolean userNameSetup(String username) {
+		boolean isValid = false;
 		
+		while (isValid == false) {
+			
+			if (username.length() > 12) {
+				System.out.println("Do not exceed 12 characters");
+				break;
+			}
+			if (username.matches(".*[., _, !, #, $, %, ^, &, *, (, ), -, +, =, /, ?, `, ~, <, >].*")) {
+				System.out.println("Please use only alphanumeric characters");
+				break;
+			} else {
+	//			writeUsernameToDB(username);
+				System.out.println("Username accepted");
+				isValid = true;
+				
+				
+			}
 		
-		username = Util.scanner.next();
-		if (username.length() > 12) {
-			System.out.println("Do not exceed 12 characters");
 		}
-		if (username.matches(".*[., _, !, #, $, %, ^, &, *, (, ), -, +, =, /, ?, `, ~, <, >].*")) {
-			System.out.println("Please use only alphanumeric characters");
-		} else {
-//			writeUsernameToDB(username);
-			System.out.println("Username accepted");
-			PassSetup pass = new PassSetup();
-			pass.passSetup();
-		}
-		
+		return true;
 		
 	}
 }

@@ -1,0 +1,79 @@
+01:55:13.652 [main] DEBUG fileLogger - Add User to Database
+01:55:13.721 [main] ERROR fileLogger - java.sql.SQLException: No suitable driver found for javabankapp.cdiwjc2x9nug.us-east-1.rds.amazonaws.com
+09:59:04.287 [main] DEBUG fileLogger - Add User to Database
+09:59:04.365 [main] ERROR fileLogger - java.sql.SQLException: No suitable driver found for javabankapp.cdiwjc2x9nug.us-east-1.rds.amazonaws.com
+11:44:37.576 [main] DEBUG fileLogger - Add User to Database
+11:44:37.582 [main] ERROR fileLogger - java.sql.SQLException: No suitable driver found for javabankapp.cdiwjc2x9nug.us-east-1.rds.amazonaws.com
+11:47:30.784 [main] DEBUG fileLogger - Add User to Database
+11:47:30.791 [main] ERROR fileLogger - java.sql.SQLException: No suitable driver found for javabankapp.cdiwjc2x9nug.us-east-1.rds.amazonaws.com
+11:48:30.175 [main] DEBUG fileLogger - Add User to Database
+11:48:30.181 [main] ERROR fileLogger - java.sql.SQLException: No suitable driver found for javabankapp.cdiwjc2x9nug.us-east-1.rds.amazonaws.com
+12:03:24.537 [main] DEBUG fileLogger - Add User to Database
+12:03:25.014 [main] ERROR fileLogger - org.postgresql.util.PSQLException: ERROR: syntax error at or near "'bob'"
+  Position: 20
+12:07:13.826 [main] DEBUG fileLogger - Add User to Database
+12:07:14.263 [main] ERROR fileLogger - org.postgresql.util.PSQLException: ERROR: INSERT has more expressions than target columns
+  Position: 169
+12:07:42.498 [main] DEBUG fileLogger - Add User to Database
+12:07:42.915 [main] ERROR fileLogger - org.postgresql.util.PSQLException: ERROR: duplicate key value violates unique constraint "users_first_name_key"
+  Detail: Key (first_name)=(bob) already exists.
+12:08:32.988 [main] DEBUG fileLogger - Add User to Database
+12:08:33.441 [main] ERROR fileLogger - org.postgresql.util.PSQLException: No results were returned by the query.
+13:36:32.377 [main] DEBUG fileLogger - Get User from Database
+13:38:19.683 [main] DEBUG fileLogger - Get User from Database
+14:04:05.692 [main] DEBUG fileLogger - Get User from Database
+14:04:06.130 [main] ERROR fileLogger - org.postgresql.util.PSQLException: ERROR: syntax error at or near "'email'"
+  Position: 18
+14:04:06.131 [main] DEBUG fileLogger - Get User from Database
+14:09:48.548 [main] DEBUG fileLogger - Get User from Database
+14:09:48.964 [main] ERROR fileLogger - org.postgresql.util.PSQLException: ERROR: syntax error at or near "'email'"
+  Position: 18
+14:09:48.965 [main] DEBUG fileLogger - Get User from Database
+14:15:41.968 [main] DEBUG fileLogger - Add User to Database
+14:15:42.431 [main] ERROR fileLogger - org.postgresql.util.PSQLException: ERROR: duplicate key value violates unique constraint "users_un"
+  Detail: Key (ssn)=(111111111) already exists.
+14:20:17.284 [main] DEBUG fileLogger - Get User from Database
+14:20:17.733 [main] ERROR fileLogger - org.postgresql.util.PSQLException: ERROR: syntax error at or near "'email'"
+  Position: 18
+14:20:17.733 [main] DEBUG fileLogger - Get User from Database
+14:20:52.529 [main] DEBUG fileLogger - Add User to Database
+14:20:53.063 [main] ERROR fileLogger - org.postgresql.util.PSQLException: ERROR: duplicate key value violates unique constraint "users_un"
+  Detail: Key (ssn)=(111111111) already exists.
+14:22:31.872 [main] DEBUG fileLogger - Add User to Database
+14:22:32.300 [main] ERROR fileLogger - org.postgresql.util.PSQLException: ERROR: duplicate key value violates unique constraint "users_un"
+  Detail: Key (ssn)=(111111111) already exists.
+14:24:29.784 [main] DEBUG fileLogger - Get User from Database
+14:24:30.276 [main] ERROR fileLogger - org.postgresql.util.PSQLException: ERROR: syntax error at or near "'"first_name"'"
+  Position: 18
+14:24:30.276 [main] DEBUG fileLogger - Get User from Database
+14:25:16.769 [main] DEBUG fileLogger - Add User to Database
+14:25:17.250 [main] ERROR fileLogger - org.postgresql.util.PSQLException: ERROR: duplicate key value violates unique constraint "users_un"
+  Detail: Key (ssn)=(111111111) already exists.
+14:27:22.381 [main] DEBUG fileLogger - Get User from Database
+14:27:22.905 [main] ERROR fileLogger - org.postgresql.util.PSQLException: No results were returned by the query.
+14:27:22.906 [main] DEBUG fileLogger - Get User from Database
+14:28:35.402 [main] DEBUG fileLogger - Get User from Database
+14:28:35.826 [main] ERROR fileLogger - org.postgresql.util.PSQLException: No results were returned by the query.
+14:28:35.826 [main] DEBUG fileLogger - Get User from Database
+14:35:23.311 [main] DEBUG fileLogger - Get User from Database
+14:35:23.762 [main] DEBUG fileLogger - Add User to Database
+14:35:24.221 [main] ERROR fileLogger - org.postgresql.util.PSQLException: No results were returned by the query.
+16:09:29.565 [main] DEBUG fileLogger - Add User to Database
+16:09:29.984 [main] ERROR fileLogger - org.postgresql.util.PSQLException: No results were returned by the query.
+17:15:48.823 [main] DEBUG fileLogger - Get User login from Database
+17:15:50.229 [main] ERROR fileLogger - org.postgresql.util.PSQLException: ERROR: syntax error at or near ")"
+  Position: 51
+17:19:52.722 [main] DEBUG fileLogger - Get User login from Database
+17:19:54.080 [main] ERROR fileLogger - org.postgresql.util.PSQLException: ERROR: syntax error at or near ")"
+  Position: 51
+17:20:32.420 [main] DEBUG fileLogger - Get User login from Database
+17:20:33.784 [main] ERROR fileLogger - org.postgresql.util.PSQLException: ERROR: syntax error at or near ")"
+  Position: 51
+17:22:00.956 [main] DEBUG fileLogger - Get User login from Database
+09:57:47.063 [main] DEBUG fileLogger - Get User login from Database
+10:04:42.965 [main] DEBUG fileLogger - Get User login from Database
+10:15:59.481 [main] DEBUG fileLogger - Get User login from Database
+10:19:59.006 [main] DEBUG fileLogger - Get User login from Database
+10:21:13.084 [main] DEBUG fileLogger - Get User login from Database
+10:25:20.857 [main] DEBUG fileLogger - Get User login from Database
+10:25:22.230 [main] DEBUG fileLogger - Get User login from Database

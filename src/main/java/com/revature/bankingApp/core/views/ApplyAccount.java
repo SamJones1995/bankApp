@@ -10,7 +10,7 @@ public class ApplyAccount {
 	
 	
 	
-	public static void applyAccount() {
+	public static void applyAccount(Integer userId) {
 		System.out.println("Would you like to apply to open an account? Enter YES or NO");
 		String application = Util.scanner.next();
 		if (application.equals("YES")) {

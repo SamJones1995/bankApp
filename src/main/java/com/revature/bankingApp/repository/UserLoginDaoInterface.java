@@ -11,10 +11,21 @@ public interface UserLoginDaoInterface {
 
 	UserLoginDTO getUserLogin(UserLoginDTO userLogDto);
 
-	UserLoginDTO updateUserLogin(Integer ssn, String column, String value);
+
 	
 	
 	
-	boolean deleteUserLogin(UserLoginDTO uLogin);
+
+
+
+	UserLoginDTO updateUserLogin(String username, String column, String value);
+
+
+
+	UserLoginDTO updateUserLogin(String username, String column, Integer value);
+
+
+
+	boolean deleteUserLogin(String username);
 
 }

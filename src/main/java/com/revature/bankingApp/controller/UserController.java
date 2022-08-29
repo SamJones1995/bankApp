@@ -35,14 +35,16 @@ public class UserController implements UserInputInterface{
 	}
 	
 	public void login() {
-		System.out.println("Please login with username and password \n");
+		System.out.println("Please input username \n");
 		String username = getUserInput();
+		System.out.println("Please input password \n");
 		String password = getUserInput();
 		UserLoginDTO user = validateLogin(username, password);
 		
+		
 		if (user != null) {
 			System.out.println("Successful login");
-			System.out.println(user.toString());
+			UserMenu.Menu(user.getUserId());	
 		} else {
 			System.out.println("failed login");
 		}

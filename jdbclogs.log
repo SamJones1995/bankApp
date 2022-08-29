@@ -77,3 +77,230 @@
 10:21:13.084 [main] DEBUG fileLogger - Get User login from Database
 10:25:20.857 [main] DEBUG fileLogger - Get User login from Database
 10:25:22.230 [main] DEBUG fileLogger - Get User login from Database
+10:33:45.698 [main] DEBUG fileLogger - Get User login from Database
+11:01:28.735 [main] DEBUG fileLogger - Get User login from Database
+11:02:34.279 [main] DEBUG fileLogger - Get User login from Database
+11:03:53.055 [main] DEBUG fileLogger - Get User login from Database
+11:15:17.723 [main] DEBUG fileLogger - Get User login from Database
+11:15:19.059 [main] ERROR fileLogger - org.postgresql.util.PSQLException: ResultSet not positioned properly, perhaps you need to call next.
+11:16:02.050 [main] DEBUG fileLogger - Get User login from Database
+11:16:44.933 [main] DEBUG fileLogger - Get User login from Database
+11:18:40.813 [main] DEBUG fileLogger - Get User login from Database
+11:19:33.103 [main] DEBUG fileLogger - Get User login from Database
+11:20:15.741 [main] DEBUG fileLogger - Get User login from Database
+11:23:37.800 [main] DEBUG fileLogger - Get User login from Database
+11:26:34.842 [main] DEBUG fileLogger - Get User login from Database
+11:29:53.424 [main] DEBUG fileLogger - Get User login from Database
+11:31:19.354 [main] DEBUG fileLogger - Get User login from Database
+11:31:57.220 [main] DEBUG fileLogger - Get User login from Database
+11:34:00.658 [main] DEBUG fileLogger - Get User login from Database
+11:35:44.232 [main] DEBUG fileLogger - Get User login from Database
+11:35:54.138 [main] DEBUG fileLogger - Get User login from Database
+11:37:03.160 [main] DEBUG fileLogger - Get User login from Database
+12:06:39.394 [main] DEBUG fileLogger - Add User login to Database
+12:06:40.757 [main] ERROR fileLogger - org.postgresql.util.PSQLException: No results were returned by the query.
+12:07:18.449 [main] DEBUG fileLogger - Add User login to Database
+12:07:19.812 [main] ERROR fileLogger - org.postgresql.util.PSQLException: ERROR: duplicate key value violates unique constraint "user_login_username_key"
+  Detail: Key (username)=(boboman) already exists.
+12:07:19.812 [main] DEBUG fileLogger - Get User from Database
+12:07:20.189 [main] ERROR fileLogger - org.postgresql.util.PSQLException: ERROR: column "ssn" does not exist
+  Position: 50
+12:08:37.388 [main] DEBUG fileLogger - Get User from Database
+12:08:38.724 [main] ERROR fileLogger - org.postgresql.util.PSQLException: No results were returned by the query.
+12:13:27.217 [main] DEBUG fileLogger - Remove User to Database
+12:13:28.595 [main] ERROR fileLogger - org.postgresql.util.PSQLException: No results were returned by the query.
+12:38:09.261 [main] DEBUG fileLogger - Add User login to Database
+12:38:10.663 [main] ERROR fileLogger - org.postgresql.util.PSQLException: No results were returned by the query.
+12:41:08.293 [main] DEBUG fileLogger - Add User to Database
+12:41:09.649 [main] ERROR fileLogger - org.postgresql.util.PSQLException: No results were returned by the query.
+12:41:23.481 [main] DEBUG fileLogger - Add User to Database
+12:41:24.865 [main] ERROR fileLogger - org.postgresql.util.PSQLException: ERROR: duplicate key value violates unique constraint "users_un"
+  Detail: Key (ssn)=(221341121) already exists.
+12:44:46.281 [main] DEBUG fileLogger - Add bank account to Database
+12:44:47.640 [main] ERROR fileLogger - org.postgresql.util.PSQLException: ERROR: column "user_type_id" of relation "accounts" does not exist
+  Position: 49
+12:49:27.319 [main] DEBUG fileLogger - Add bank account to Database
+12:49:28.693 [main] ERROR fileLogger - org.postgresql.util.PSQLException: No results were returned by the query.
+13:12:17.102 [main] DEBUG fileLogger - Add bank account to Database
+13:12:18.512 [main] ERROR fileLogger - org.postgresql.util.PSQLException: No results were returned by the query.
+13:12:18.515 [main] DEBUG fileLogger - Add bank account to User Database
+13:12:18.886 [main] ERROR fileLogger - org.postgresql.util.PSQLException: ERROR: invalid input syntax for type integer: "null"
+  Position: 68
+13:28:10.219 [main] DEBUG fileLogger - Add bank account to Database
+13:28:12.332 [main] ERROR fileLogger - org.postgresql.util.PSQLException: No results were returned by the query.
+13:28:12.335 [main] DEBUG fileLogger - Add bank account to User Database
+13:28:12.718 [main] ERROR fileLogger - org.postgresql.util.PSQLException: ERROR: invalid input syntax for type integer: "null"
+  Position: 68
+13:36:11.351 [main] DEBUG fileLogger - Add bank account to Database
+13:36:12.696 [main] ERROR fileLogger - org.postgresql.util.PSQLException: No results were returned by the query.
+13:36:12.699 [main] DEBUG fileLogger - Add bank account to User Database
+13:36:13.054 [main] ERROR fileLogger - org.postgresql.util.PSQLException: ERROR: invalid input syntax for type integer: "null"
+  Position: 68
+13:39:20.072 [main] DEBUG fileLogger - Add bank account to Database
+13:39:21.442 [main] ERROR fileLogger - org.postgresql.util.PSQLException: No results were returned by the query.
+13:39:21.444 [main] DEBUG fileLogger - Add bank account to User Database
+13:39:21.823 [main] ERROR fileLogger - org.postgresql.util.PSQLException: ERROR: invalid input syntax for type integer: "null"
+  Position: 68
+13:43:19.101 [main] DEBUG fileLogger - Add User to Database
+13:43:20.491 [main] ERROR fileLogger - org.postgresql.util.PSQLException: No results were returned by the query.
+13:45:55.691 [main] DEBUG fileLogger - Add User to Database
+13:45:57.073 [main] ERROR fileLogger - org.postgresql.util.PSQLException: No results were returned by the query.
+13:45:57.077 [main] DEBUG fileLogger - Add bank account to Database
+13:45:57.450 [main] ERROR fileLogger - org.postgresql.util.PSQLException: No results were returned by the query.
+13:45:57.453 [main] DEBUG fileLogger - Add bank account to User Database
+13:45:57.792 [main] ERROR fileLogger - org.postgresql.util.PSQLException: ERROR: invalid input syntax for type integer: "null"
+  Position: 63
+13:49:58.431 [main] DEBUG fileLogger - Add User to Database
+13:49:59.805 [main] ERROR fileLogger - org.postgresql.util.PSQLException: No results were returned by the query.
+13:49:59.809 [main] DEBUG fileLogger - Add bank account to Database
+13:50:00.213 [main] ERROR fileLogger - org.postgresql.util.PSQLException: No results were returned by the query.
+13:50:00.216 [main] DEBUG fileLogger - Add bank account to User Database
+13:50:00.654 [main] ERROR fileLogger - org.postgresql.util.PSQLException: ERROR: invalid input syntax for type integer: "null"
+  Position: 63
+13:07:37.011 [main] DEBUG fileLogger - Add bank account to User Database
+13:07:37.015 [main] DEBUG fileLogger - Get User from Database
+13:07:38.549 [main] ERROR fileLogger - org.postgresql.util.PSQLException: ERROR: column "accountid" does not exist
+  Hint: Perhaps you meant to reference the column "accounts.account_id".
+  Position: 30
+13:07:38.935 [main] ERROR fileLogger - org.postgresql.util.PSQLException: ERROR: invalid input syntax for type integer: "null"
+  Position: 68
+13:08:53.838 [main] DEBUG fileLogger - Add bank account to User Database
+13:08:53.842 [main] DEBUG fileLogger - Get User from Database
+13:08:55.240 [main] ERROR fileLogger - org.postgresql.util.PSQLException: ERROR: column "accountid" does not exist
+  Hint: Perhaps you meant to reference the column "accounts.account_id".
+  Position: 30
+13:08:55.603 [main] ERROR fileLogger - org.postgresql.util.PSQLException: No results were returned by the query.
+13:10:12.710 [main] DEBUG fileLogger - Add bank account to User Database
+13:10:14.040 [main] ERROR fileLogger - org.postgresql.util.PSQLException: No results were returned by the query.
+15:01:16.383 [main] DEBUG fileLogger - Add bank account to Database
+15:02:07.869 [main] DEBUG fileLogger - Add bank account to Database
+15:02:55.667 [main] DEBUG fileLogger - Add bank account to Database
+15:08:44.935 [main] DEBUG fileLogger - Add bank account to Database
+15:39:02.493 [main] DEBUG fileLogger - Adding to Account from Database
+15:39:02.494 [main] DEBUG fileLogger - Get User from Database
+19:05:11.201 [main] DEBUG fileLogger - Adding to Account from Database
+19:05:11.202 [main] DEBUG fileLogger - Get User from Database
+19:05:12.570 [main] ERROR fileLogger - org.postgresql.util.PSQLException: ERROR: column "accountid" does not exist
+  Hint: Perhaps you meant to reference the column "accounts.account_id".
+  Position: 30
+19:06:11.886 [main] DEBUG fileLogger - Adding to Account from Database
+19:06:11.886 [main] DEBUG fileLogger - Get User from Database
+19:06:13.642 [main] ERROR fileLogger - org.postgresql.util.PSQLException: No results were returned by the query.
+19:34:55.968 [main] DEBUG fileLogger - Adding to Account from Database
+19:34:55.969 [main] DEBUG fileLogger - Get User from Database
+19:34:57.765 [main] ERROR fileLogger - org.postgresql.util.PSQLException: No results were returned by the query.
+19:38:44.140 [main] DEBUG fileLogger - Add bank account to Database
+19:38:45.551 [main] ERROR fileLogger - org.postgresql.util.PSQLException: No results were returned by the query.
+19:38:45.553 [main] DEBUG fileLogger - Add bank account to Database
+19:38:45.924 [main] ERROR fileLogger - org.postgresql.util.PSQLException: No results were returned by the query.
+19:44:20.031 [main] DEBUG fileLogger - Add User to Database
+19:44:21.348 [main] ERROR fileLogger - org.postgresql.util.PSQLException: No results were returned by the query.
+19:46:32.299 [main] DEBUG fileLogger - Get User from Database
+19:58:01.932 [main] DEBUG fileLogger - Add bank account to Database
+19:58:03.308 [main] ERROR fileLogger - org.postgresql.util.PSQLException: ERROR: syntax error at or near "SELECT"
+  Position: 86
+19:58:03.310 [main] DEBUG fileLogger - Add bank account to User Database
+19:58:03.727 [main] ERROR fileLogger - org.postgresql.util.PSQLException: ERROR: invalid input syntax for type integer: "null"
+  Position: 68
+20:01:45.570 [main] DEBUG fileLogger - Add bank account to Database
+20:01:46.948 [main] DEBUG fileLogger - Add bank account to User Database
+20:01:47.332 [main] ERROR fileLogger - org.postgresql.util.PSQLException: ERROR: invalid input syntax for type integer: "null"
+  Position: 68
+20:09:07.905 [main] DEBUG fileLogger - Add bank account to Database
+20:09:09.312 [main] DEBUG fileLogger - Add bank account to User Database
+20:09:09.713 [main] ERROR fileLogger - org.postgresql.util.PSQLException: No results were returned by the query.
+20:18:14.777 [main] DEBUG fileLogger - subtracting from Account from Database
+20:18:14.778 [main] DEBUG fileLogger - Get User from Database
+20:18:16.532 [main] ERROR fileLogger - org.postgresql.util.PSQLException: No results were returned by the query.
+20:20:12.114 [main] DEBUG fileLogger - subtracting from Account from Database
+20:20:12.114 [main] DEBUG fileLogger - Get User from Database
+20:20:13.892 [main] ERROR fileLogger - org.postgresql.util.PSQLException: No results were returned by the query.
+20:23:42.601 [main] DEBUG fileLogger - Adding to Account from Database
+20:23:42.602 [main] DEBUG fileLogger - Get User from Database
+20:23:44.016 [main] DEBUG fileLogger - subtracting from Account from Database
+20:23:44.016 [main] DEBUG fileLogger - Get User from Database
+20:23:44.758 [main] ERROR fileLogger - org.postgresql.util.PSQLException: No results were returned by the query.
+20:23:45.123 [main] ERROR fileLogger - org.postgresql.util.PSQLException: No results were returned by the query.
+20:40:10.587 [main] DEBUG fileLogger - Remove Account from Database
+20:40:11.959 [main] ERROR fileLogger - org.postgresql.util.PSQLException: No results were returned by the query.
+20:40:53.429 [main] DEBUG fileLogger - Update account from Database
+20:40:54.836 [main] ERROR fileLogger - org.postgresql.util.PSQLException: No results were returned by the query.
+22:21:39.564 [main] DEBUG fileLogger - Get User from Database
+22:21:40.901 [main] ERROR fileLogger - org.postgresql.util.PSQLException: ERROR: syntax error at or near "returning"
+  Position: 56
+22:22:27.506 [main] DEBUG fileLogger - Get User from Database
+22:22:28.868 [main] ERROR fileLogger - org.postgresql.util.PSQLException: ERROR: syntax error at or near "returning"
+  Position: 56
+22:22:42.632 [main] DEBUG fileLogger - Get User from Database
+22:23:11.291 [main] DEBUG fileLogger - Get User from Database
+22:29:35.671 [main] DEBUG fileLogger - Remove Account from Database
+22:29:37.029 [main] ERROR fileLogger - org.postgresql.util.PSQLException: No results were returned by the query.
+22:59:29.832 [main] DEBUG fileLogger - Add bank account to User Database
+22:59:31.193 [main] ERROR fileLogger - org.postgresql.util.PSQLException: No results were returned by the query.
+23:11:28.380 [main] DEBUG fileLogger - Update user employee rep from Database
+23:11:29.743 [main] ERROR fileLogger - org.postgresql.util.PSQLException: No results were returned by the query.
+23:12:09.766 [main] DEBUG fileLogger - Remove employee assignment from Database
+23:12:11.130 [main] ERROR fileLogger - org.postgresql.util.PSQLException: No results were returned by the query.
+23:14:53.422 [main] DEBUG fileLogger - Get User login from Database
+23:23:02.465 [main] DEBUG fileLogger - Get User login from Database
+23:26:23.171 [main] DEBUG fileLogger - Get User login from Database
+23:30:51.959 [main] DEBUG fileLogger - Get User login from Database
+23:31:51.495 [main] DEBUG fileLogger - Get User login from Database
+23:45:55.623 [main] DEBUG fileLogger - Get User login from Database
+23:48:44.557 [main] DEBUG fileLogger - Get User login from Database
+23:51:10.856 [main] DEBUG fileLogger - Get User login from Database
+23:54:17.148 [main] DEBUG fileLogger - Get User login from Database
+23:57:07.428 [main] DEBUG fileLogger - Get User login from Database
+23:58:34.206 [main] DEBUG fileLogger - Get User login from Database
+00:06:46.630 [main] DEBUG fileLogger - Get User login from Database
+00:07:46.647 [main] DEBUG fileLogger - Add User to Database
+00:07:47.067 [main] ERROR fileLogger - org.postgresql.util.PSQLException: No results were returned by the query.
+00:17:04.224 [main] DEBUG fileLogger - Get User login from Database
+00:18:15.728 [main] DEBUG fileLogger - Get User login from Database
+00:22:07.036 [main] DEBUG fileLogger - Get User login from Database
+00:23:29.049 [main] DEBUG fileLogger - Get User login from Database
+00:24:23.232 [main] DEBUG fileLogger - Get User login from Database
+00:36:52.271 [main] DEBUG fileLogger - Get User login from Database
+00:37:55.026 [main] DEBUG fileLogger - Get User login from Database
+00:39:14.071 [main] DEBUG fileLogger - Get User login from Database
+00:40:05.527 [main] DEBUG fileLogger - Get User login from Database
+00:47:28.744 [main] DEBUG fileLogger - Get User login from Database
+00:55:05.187 [main] DEBUG fileLogger - Get User login from Database
+01:08:58.854 [main] DEBUG fileLogger - Get User login from Database
+01:09:08.865 [main] DEBUG fileLogger - Get User from Database
+01:09:09.215 [main] DEBUG fileLogger - Get User from Database
+01:14:54.609 [main] DEBUG fileLogger - Get User login from Database
+01:14:58.863 [main] DEBUG fileLogger - Get User from Database
+01:14:59.224 [main] DEBUG fileLogger - Get User from Database
+01:24:44.395 [main] DEBUG fileLogger - Get User login from Database
+01:24:48.638 [main] DEBUG fileLogger - Get User from Database
+01:24:49.000 [main] DEBUG fileLogger - Get User from Database
+01:24:49.333 [main] DEBUG fileLogger - Get User from Database
+01:24:49.660 [main] DEBUG fileLogger - Get User from Database
+01:24:50.036 [main] DEBUG fileLogger - Get User from Database
+01:24:50.406 [main] DEBUG fileLogger - Get User from Database
+01:26:49.137 [main] DEBUG fileLogger - Get User login from Database
+01:26:52.121 [main] DEBUG fileLogger - Get User from Database
+01:27:29.529 [main] DEBUG fileLogger - Get User login from Database
+01:27:32.059 [main] DEBUG fileLogger - Get User from Database
+01:28:22.045 [main] DEBUG fileLogger - Get User login from Database
+01:28:24.721 [main] DEBUG fileLogger - Get User from Database
+01:31:15.704 [main] DEBUG fileLogger - Get User login from Database
+01:31:19.211 [main] DEBUG fileLogger - Get User from Database
+01:31:19.588 [main] DEBUG fileLogger - Get User from Database
+01:31:19.928 [main] DEBUG fileLogger - Get User from Database
+01:31:20.278 [main] DEBUG fileLogger - Get User from Database
+01:31:20.634 [main] DEBUG fileLogger - Get User from Database
+01:31:20.989 [main] DEBUG fileLogger - Get User from Database
+01:31:56.024 [main] DEBUG fileLogger - Get User login from Database
+01:31:59.727 [main] DEBUG fileLogger - Get User from Database
+01:32:00.087 [main] DEBUG fileLogger - Get User from Database
+01:51:50.842 [main] DEBUG fileLogger - Get User login from Database
+01:51:56.120 [main] DEBUG fileLogger - Get User from Database
+01:51:56.495 [main] DEBUG fileLogger - Get User from Database
+01:53:11.348 [main] DEBUG fileLogger - Get User login from Database
+01:53:14.693 [main] DEBUG fileLogger - Get User from Database
+01:53:15.063 [main] DEBUG fileLogger - Get User from Database
+01:54:26.208 [main] DEBUG fileLogger - Get User login from Database
+01:54:30.004 [main] DEBUG fileLogger - Get User from Database
+01:54:30.357 [main] DEBUG fileLogger - Get User from Database

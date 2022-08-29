@@ -47,6 +47,15 @@ public class UserLoginDTO implements UserLoginDTOInterface{
 		this.username = username;
 		this.password = password;
 	}
+	
+	
+
+	public UserLoginDTO(String username, String password, Integer userTypeId) {
+		super();
+		this.username = username;
+		this.password = password;
+		this.userTypeId = userTypeId;
+	}
 
 	public UserLoginDTO() {
 		// TODO Auto-generated constructor stub

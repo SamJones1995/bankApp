@@ -27,8 +27,7 @@ public class LoginService implements UserLoginInterface{
 		
 		UserLoginDTO uDtoDB = uDao.getUserLogin(uDto);
 		
-		if (uDtoDB == null) {
-			System.out.println("Login failure");
+		if (uDtoDB.getUsername() == null) {
 			return null;
 		}
 		
@@ -41,7 +40,7 @@ public class LoginService implements UserLoginInterface{
 			return uLogDto;
 		}
 		
-		if (!((uDtoDB.getUsername().equals(uDtoDB.getUsername())) && (uDtoDB.getPassword().equals(uDtoDB.getPassword())))) {
+		if (!((uDto.getUsername().equals(uDtoDB.getUsername())) && (uDto.getPassword().equals(uDtoDB.getPassword())))) {
 			System.out.println("Login failure");
 			return null;
 		}

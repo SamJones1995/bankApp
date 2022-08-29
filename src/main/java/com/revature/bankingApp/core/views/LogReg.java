@@ -51,8 +51,8 @@ public class LogReg {
 //			
 //			if (newUser.userNameSetup(username) == true);
 			
-			ApplyAccount apply = new ApplyAccount();
-			apply.applyAccount();
+//			ApplyAccount apply = new ApplyAccount();
+//			apply.applyAccount();
 			
 		
 			

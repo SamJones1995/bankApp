@@ -12,7 +12,8 @@ import java.util.Scanner;
 
 import com.revature.bankingApp.Driver;
 import com.revature.bankingApp.controller.UserController;
-import com.revature.bankingApp.core.UserSetup;
+import com.revature.bankingApp.controller.UserLoginRegistration;
+import com.revature.bankingApp.core.UserLoginRegistrationEntries;
 
 
 public class LogReg {
@@ -45,8 +46,8 @@ public class LogReg {
 		}
 		if (input.equals("REGISTER")){
 			System.out.println("Please enter Username do not exceed 12 characters");
-			UserSetup newUser = new UserSetup();
-			String username = Util.scanner.next();
+		
+			UserLoginRegistration.userLoginRegistration();
 			
 //			
 //			if (newUser.userNameSetup(username) == true);

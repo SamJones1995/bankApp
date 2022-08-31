@@ -4,13 +4,15 @@ import java.sql.Connection;
 import java.sql.ResultSet;
 import java.sql.SQLException;
 import java.sql.Statement;
+import java.util.ArrayList;
+import java.util.Random;
 
 import org.slf4j.Logger;
 import org.slf4j.LoggerFactory;
 
+
 import com.revature.bankingApp.core.util.ConnectionFactory;
 import com.revature.bankingApp.repository.DTO.AccountDTO;
-import com.revature.bankingApp.repository.DTO.UserDTO;
 
 public class AccountDao implements AccountDaoInterface{
 	
@@ -247,10 +249,65 @@ AccountDTO aDto = new AccountDTO();
 	}
 
 
-	@Override
-	public AccountDTO createAccount(Integer userId, Integer balance, Integer accountTypeId) {
-		// TODO Auto-generated method stub
-		return null;
+	public static AccountDTO createAccount(Integer userId, Double balance, Integer accountTypeId) {
+		Logger consoleLogger = LoggerFactory.getLogger("consoleLogger");
+		Logger fileLogger = LoggerFactory.getLogger("fileLogger");
+		consoleLogger.debug("creating bank account with typeId: " + accountTypeId + "for userId: " + userId);
+		fileLogger.debug("Add bank account to Database");
+		
+		final String sql = "INSERT INTO accounts (balance, account_type_id, approved)"
+				+ "values ('"+balance+"','"+accountTypeId+"' , FALSE) returning account_id, balance, account_type_id, approved;";
+		
+		AccountDTO aDto = new AccountDTO();
+		
+		try (Connection connection = ConnectionFactory.getConnection();
+				Statement statement = connection.createStatement();)
+		{
+			ResultSet set = statement.executeQuery(sql);
+			
+			if(set.next()) {
+				 aDto = new AccountDTO(
+						set.getInt(1), set.getDouble(2),
+						set.getInt(3),
+						set.getBoolean(4));
+				
+				
+				
+			}
+			
+			
+			//assign user to bank account
+			UserAccountsBridgeDao uDao = new UserAccountsBridgeDao();
+			
+			uDao.createUserAccountBridge(userId, aDto.getAccountId());
+			
+			//assign bank account to employee
+			EmployeeAssignmentDao eDao = new EmployeeAssignmentDao();
+			
+			UserLoginDao uLogDao = new UserLoginDao();
+			
+			ArrayList list = uLogDao.getUserLoginsByType(2);
+			
+			int indexTop = list.size() - 1;
+			
+			Integer index = (int)(Math.random()*(indexTop+1));  
+			
+			eDao.createEmployeeAssignment(userId, (Integer) list.get(index));
+			
+			
+			consoleLogger.info(aDto.toString());
+		
+		} catch (SQLException e) {
+			e.printStackTrace();
+			consoleLogger.error(e.getMessage());
+			fileLogger.error(e.toString());
+		}
+		
+		
+		
+		
+		
+		return aDto;
 	}
 
 	@Override
@@ -263,6 +320,38 @@ AccountDTO aDto = new AccountDTO();
 
 	@Override
 	public AccountDTO updateAccount(Integer accountId, String column, Double value) {
+		AccountDTO aDto = new AccountDTO();	
+		consoleLogger.debug("Updating account: " + accountId);
+		fileLogger.debug("Update account from Database");
+		
+		String columnFormatted = "\"" + column + "\"";
+		
+		final String sql = "UPDATE accounts SET "+columnFormatted+" = '"+value+"' WHERE account_id = '"+accountId+"';";
+		System.out.println(sql);
+		
+		try (Connection connection = ConnectionFactory.getConnection();
+				Statement statement = connection.createStatement();)
+			{
+				ResultSet set = statement.executeQuery(sql);
+				
+				if(set.next()) {
+					aDto = new AccountDTO(
+							set.getInt(1), set.getDouble(2),
+							set.getInt(3),
+							set.getBoolean(4));
+				}
+				
+			} catch (SQLException e) {
+				// TODO Auto-generated catch block
+				consoleLogger.error(e.getMessage());
+				fileLogger.error(e.toString());
+			}
+		
+		return aDto;
+		
+	}
+
+	public AccountDTO updateAccount(Integer accountId, String column, boolean value) {
 		AccountDTO aDto = new AccountDTO();	
 		consoleLogger.debug("Updating account: " + accountId);
 		fileLogger.debug("Update account from Database");

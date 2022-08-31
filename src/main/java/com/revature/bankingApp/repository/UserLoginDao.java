@@ -4,6 +4,7 @@ import java.sql.Connection;
 import java.sql.ResultSet;
 import java.sql.SQLException;
 import java.sql.Statement;
+import java.util.ArrayList;
 
 import org.slf4j.Logger;
 import org.slf4j.LoggerFactory;
@@ -14,8 +15,8 @@ import com.revature.bankingApp.repository.DTO.UserLoginDTO;
 
 public class UserLoginDao implements UserLoginDaoInterface{
 	
-	Logger consoleLogger;
-	Logger fileLogger;
+	static Logger consoleLogger;
+	static Logger fileLogger;
 	
 	public UserLoginDao() {
 		consoleLogger = LoggerFactory.getLogger("consoleLogger");
@@ -92,10 +93,166 @@ public class UserLoginDao implements UserLoginDaoInterface{
 		return userLogDto;
 		
 		
+	}
+	
+public ArrayList<Integer> getUserLoginsByType(Integer userType) {
+		
+		consoleLogger.debug("Getting user logins with type Id: " + userType);
+		fileLogger.debug("Get User login from Database");
+		
+		final String sql = "SELECT * FROM user_login WHERE user_type_id =  '"+userType+"';";
+		
+		ArrayList<Integer> employees = new ArrayList<Integer>();
+		try (Connection connection = ConnectionFactory.getConnection();
+				Statement statement = connection.createStatement();)
+		{
+			ResultSet set = statement.executeQuery(sql);
+			
+			
+			
+			while (set.next()) {
+				Integer result = set.getInt(1);
+				employees.add(result);
+				
+			}
+		
+		} catch (SQLException e) {
+			e.printStackTrace();
+			consoleLogger.error(e.getMessage());
+			fileLogger.error(e.toString());
+		}
+		
+		return employees;
+		
+		
+	}
+
+public static UserLoginDTO getUserLogin(String username, String password) {
+	UserLoginDTO userLogDto = new UserLoginDTO();
+		consoleLogger.debug("Getting user login with username: " + username);
+		fileLogger.debug("Get User login from Database");
+		
+		final String sql = "SELECT * FROM user_login WHERE username =  '"+username+"' AND password = '"+password+"';";
+		
+		try (Connection connection = ConnectionFactory.getConnection();
+				Statement statement = connection.createStatement();)
+		{
+			ResultSet set = statement.executeQuery(sql);
+			
+			
+			
+			if(set.next()) {
+				
+				userLogDto = new UserLoginDTO(
+						set.getInt(1), set.getString(2),
+						set.getString(3),
+						set.getInt(4), set.getInt(5));
+				
+				
+				
+			}
+			
+			
+		
+		} catch (SQLException e) {
+			
+			
+			consoleLogger.error(e.getMessage());
+			fileLogger.error(e.toString());
+		}
+		
+		return userLogDto;
+		
+		
+	}
+	
+
+
+public UserLoginDTO getUserLogin(Integer userId) {
+	UserLoginDTO userLogDto = new UserLoginDTO();
+		consoleLogger.debug("Getting user login with userId: " + userId);
+		fileLogger.debug("Get User login from Database");
+		
+		final String sql = "SELECT * FROM user_login WHERE user_id =  '"+userId+"';";
+		
+		try (Connection connection = ConnectionFactory.getConnection();
+				Statement statement = connection.createStatement();)
+		{
+			ResultSet set = statement.executeQuery(sql);
+			
+			
+			
+			if(set.next()) {
+				
+				userLogDto = new UserLoginDTO(
+						set.getInt(1), set.getString(2),
+						set.getString(3),
+						set.getInt(4), set.getInt(5));
+				
+				
+				
+			}
+			
+			
+		
+		} catch (SQLException e) {
+			
+			
+			consoleLogger.error(e.getMessage());
+			fileLogger.error(e.toString());
+		}
+		
+		return userLogDto;
+		
+		
 		
 		
 		
 	}
+
+public static UserLoginDTO getUserLoginById(Integer userLoginId) {
+	UserLoginDTO userLogDto = new UserLoginDTO();
+//		consoleLogger.debug("Getting user login with userloginId: " + userLoginId);
+//		fileLogger.debug("Get User login from Database");
+		
+		final String sql = "SELECT * FROM user_login WHERE user_login_id =  '"+userLoginId+"';";
+		
+		try (Connection connection = ConnectionFactory.getConnection();
+				Statement statement = connection.createStatement();)
+		{
+			ResultSet set = statement.executeQuery(sql);
+			
+			
+			
+			if(set.next()) {
+				
+				userLogDto = new UserLoginDTO(
+						set.getInt(1), set.getString(2),
+						set.getString(3),
+						set.getInt(4), set.getInt(5));
+				
+				
+				
+			}
+			
+			
+		
+		} catch (SQLException e) {
+			
+			
+			consoleLogger.error(e.getMessage());
+			fileLogger.error(e.toString());
+		}
+		
+		return userLogDto;
+		
+		
+		
+		
+		
+	}
+
+	
 
 	@Override
 	public UserLoginDTO updateUserLogin(String username, String column, String value) {
@@ -139,6 +296,37 @@ public class UserLoginDao implements UserLoginDaoInterface{
 		
 		final String sql = "UPDATE user_login SET "+columnFormatted+" = '"+value+"' WHERE username = '"+username+"';";
 		System.out.println(sql);
+		
+		try (Connection connection = ConnectionFactory.getConnection();
+				Statement statement = connection.createStatement();)
+			{
+				ResultSet set = statement.executeQuery(sql);
+				
+				if(set.next()) {
+					userLogDto = new UserLoginDTO(
+							set.getInt(1), set.getString(2),
+							set.getString(3),
+							set.getInt(4), set.getInt(5));
+				}
+				
+			} catch (SQLException e) {
+				e.printStackTrace();
+				consoleLogger.error(e.getMessage());
+				fileLogger.error(e.toString());
+			}
+		
+		return userLogDto;
+	}
+	
+	public static UserLoginDTO updateUserLogin(Integer userLoginId, String column, Integer value) {
+		UserLoginDTO userLogDto = new UserLoginDTO();
+		consoleLogger.debug("Getting userLogin with userLoginId: " + userLoginId);
+		fileLogger.debug("Get UserLogin from Database");
+		
+		String columnFormatted = "\"" + column + "\"";
+		
+		final String sql = "UPDATE user_login SET "+columnFormatted+" = '"+value+"' WHERE user_login_id = '"+userLoginId+"';";
+		
 		
 		try (Connection connection = ConnectionFactory.getConnection();
 				Statement statement = connection.createStatement();)

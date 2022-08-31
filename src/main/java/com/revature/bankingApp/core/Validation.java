@@ -5,7 +5,7 @@ import java.util.regex.Pattern;
 import java.util.stream.IntStream;
 
 import com.revature.bankingApp.core.util.Util;
-import com.revature.bankingApp.core.views.ApplyAccount;
+import com.revature.bankingApp.core.views.UserDetailsEntry;
 import com.revature.bankingApp.core.views.PassSetup;
 
 public class Validation {
@@ -57,7 +57,7 @@ public class Validation {
 	public static boolean isValidName(String name)
     {
 		String regexName = "^[A-Z](?=.{1,29}$)[A-Za-z]*(?:\\h+[A-Z][A-Za-z]*)*$";
-        IntStream nameChars = name.chars();
+        
 //        System.out.println(passWee.toString());
         Pattern pattern = Pattern.compile(regexName);
         Matcher matcher = pattern.matcher(name);

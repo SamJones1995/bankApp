@@ -42,6 +42,12 @@ public class UserLoginDTO implements UserLoginDTOInterface{
 
 	
 
+	public UserLoginDTO(Integer userLoginId) {
+		super();
+		this.userLoginId = userLoginId;
+		
+	}
+
 	public UserLoginDTO(String username, String password) {
 		super();
 		this.username = username;

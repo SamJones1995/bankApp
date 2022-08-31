@@ -18,7 +18,15 @@ public interface UserLoginDaoInterface {
 
 
 
-	UserLoginDTO updateUserLogin(String username, String column, String value);
+//	UserLoginDTO updateUserLogin(String username, String column, String value);
+//
+//
+//
+//	UserLoginDTO updateUserLogin(String username, String column, Integer value);
+
+
+
+	boolean deleteUserLogin(String username);
 
 
 
@@ -26,6 +34,6 @@ public interface UserLoginDaoInterface {
 
 
 
-	boolean deleteUserLogin(String username);
+	UserLoginDTO updateUserLogin(String username, String column, String value);
 
 }

@@ -2,7 +2,7 @@ package com.revature.bankingApp.core.views;
 
 import java.util.Scanner;
 
-import com.revature.bankingApp.core.UserSetup;
+import com.revature.bankingApp.core.UserLoginRegistrationEntries;
 import com.revature.bankingApp.core.util.UtilTest;
 
 public class LogRegTest {

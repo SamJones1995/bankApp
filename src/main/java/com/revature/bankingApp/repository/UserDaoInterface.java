@@ -18,10 +18,13 @@ public interface UserDaoInterface {
 
 	UserDTO createUser(UserDTO uDto);
 
-	UserDTO getUser(Integer ssn);
 
-	UserDTO updateUser(Integer ssn, String column, String value);
-	
-	UserDTO updateUser(Integer ssn, String column, Integer value);
+
+//	UserDTO updateUser(Integer ssn, String column, String value);
+
+//
+//	UserDTO updateUser(Integer ssn, String column, String value);
+//	
+//	UserDTO updateUser(Integer ssn, String column, Integer value);
 
 }

@@ -15,10 +15,10 @@ import com.revature.bankingApp.services.models.UserLogin;
 
 public class UserDao implements UserDaoInterface{
 	
-	Logger consoleLogger;
-	Logger fileLogger;
+	static Logger consoleLogger;
+	static Logger fileLogger;
 	
-	public UserDao() {
+	public  UserDao() {
 		consoleLogger = LoggerFactory.getLogger("consoleLogger");
 		fileLogger = LoggerFactory.getLogger("fileLogger");
 		
@@ -80,9 +80,36 @@ public class UserDao implements UserDaoInterface{
 //		
 //		uDao.createUser(uDto);
 //	}
+	
+	public static UserDTO getUserById(Integer userId) {
+		UserDTO uDto = new UserDTO();
+//		consoleLogger.debug("Getting user: " + userId);
+//		fileLogger.debug("Get User from Database");
+		
+		final String sql = "SELECT * FROM users WHERE user_id = '"+userId+"';";
+		
+		try (Connection connection = ConnectionFactory.getConnection();
+				Statement statement = connection.createStatement();)
+			{
+				ResultSet set = statement.executeQuery(sql);
+				
+				if(set.next()) {
+					uDto = new UserDTO(
+							set.getInt(1), set.getString(2),
+							set.getString(3),
+							set.getString(4), set.getString(5), set.getString(6), set.getString(7), set.getInt(8), set.getInt(9), set.getString(10));
+				}
+				
+			} catch (SQLException e) {
+				// TODO Auto-generated catch block
+				consoleLogger.error(e.getMessage());
+				fileLogger.error(e.toString());
+			}
+		
+		return uDto;
+	}
 
-	@Override
-	public UserDTO getUser(Integer ssn) {
+	public static UserDTO getUser(Integer ssn) {
 		UserDTO uDto = new UserDTO();
 		consoleLogger.debug("Getting user: " + ssn);
 		fileLogger.debug("Get User from Database");
@@ -112,51 +139,15 @@ public class UserDao implements UserDaoInterface{
 		
 		
 
-
-	@Override
-	public UserDTO updateUser(Integer ssn, String column, String value) {
+	
+	public static UserDTO updateUser(Integer ssn, String column, Integer value) {
 		UserDTO uDto = new UserDTO();
 		consoleLogger.debug("Getting user: " + ssn);
 		fileLogger.debug("Get User from Database");
+		
 		
 		String columnFormatted = "\"" + column + "\"";
-		
 		final String sql = "UPDATE users SET "+columnFormatted+" = '"+value+"' WHERE ssn = '"+ssn+"';";
-		System.out.println(sql);
-		
-		try (Connection connection = ConnectionFactory.getConnection();
-				Statement statement = connection.createStatement();)
-			{
-				ResultSet set = statement.executeQuery(sql);
-				
-				if(set.next()) {
-					uDto = new UserDTO(
-							set.getInt(1), set.getString(2),
-							set.getString(3),
-							set.getString(4), set.getString(5), set.getString(6), set.getString(7), set.getInt(8), set.getInt(9), set.getString(10));
-				}
-				
-			} catch (SQLException e) {
-				// TODO Auto-generated catch block
-				consoleLogger.error(e.getMessage());
-				fileLogger.error(e.toString());
-			}
-		
-		return uDto;
-		
-		
-	}
-
-	
-	@Override
-	public UserDTO updateUser(Integer ssn, String column, Integer value) {
-		UserDTO uDto = new UserDTO();
-		consoleLogger.debug("Getting user: " + ssn);
-		fileLogger.debug("Get User from Database");
-		
-		
-		
-		final String sql = "UPDATE users SET '"+column+"' = '"+value+"' WHERE ssn = '"+ssn+"';";
 		
 		
 		try (Connection connection = ConnectionFactory.getConnection();
@@ -210,6 +201,40 @@ public class UserDao implements UserDaoInterface{
 		
 		
 		return false;
+	}
+
+
+	public static UserDTO updateUser(Integer ssn, String column, String value) {
+		UserDTO uDto = new UserDTO();
+		consoleLogger = LoggerFactory.getLogger("consoleLogger");
+		fileLogger = LoggerFactory.getLogger("fileLogger");
+		consoleLogger.debug("Getting user: " + ssn);
+		fileLogger.debug("Get User from Database");
+	
+		String columnFormatted = "\"" + column + "\"";
+		
+		final String sql = "UPDATE users SET "+columnFormatted+" = '"+value+"' WHERE ssn = '"+ssn+"';";
+		System.out.println(sql);
+		
+		try (Connection connection = ConnectionFactory.getConnection();
+				Statement statement = connection.createStatement();)
+			{
+				ResultSet set = statement.executeQuery(sql);
+				
+				if(set.next()) {
+					uDto = new UserDTO(
+							set.getInt(1), set.getString(2),
+							set.getString(3),
+							set.getString(4), set.getString(5), set.getString(6), set.getString(7), set.getInt(8), set.getInt(9), set.getString(10));
+				}
+				
+			} catch (SQLException e) {
+				// TODO Auto-generated catch block
+				UserDao.consoleLogger.error(e.getMessage());
+				UserDao.fileLogger.error(e.toString());
+			}
+		
+		return uDto;
 	}
 	
 	

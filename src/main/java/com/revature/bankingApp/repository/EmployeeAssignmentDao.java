@@ -78,7 +78,7 @@ public class EmployeeAssignmentDao {
 				
 				
 				while (set.next()) {
-			        Integer result = set.getInt(2); 
+			        Integer result = set.getInt(1); 
 			        resultList.add(result);
 			    }
 				

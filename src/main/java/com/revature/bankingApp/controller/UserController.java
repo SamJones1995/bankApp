@@ -23,8 +23,13 @@ public class UserController implements UserInputInterface{
 			return null;
 		}
 		
+		
+		
 		UserLoginDTO user = loginService.login(username, password);
+		System.out.println("validate login user: " + user.toString());
 		return user;
+		
+	
 	}
 
 
@@ -39,15 +44,20 @@ public class UserController implements UserInputInterface{
 		String username = getUserInput();
 		System.out.println("Please input password \n");
 		String password = getUserInput();
-		UserLoginDTO user = validateLogin(username, password);
 		
+		try {
+		UserLoginDTO userLogin = validateLogin(username, password);
 		
-		if (user != null) {
+		if (userLogin != null) {
 			System.out.println("Successful login");
-			UserMenu.Menu(user.getUserId());	
+			UserMenu.Menu(userLogin.getUserLoginId());	
 		} else {
 			System.out.println("failed login");
 		}
+		
+		} catch (NullPointerException e ) {
+			System.out.println("Invalid login");
+		}
+		
 	}
-
 }

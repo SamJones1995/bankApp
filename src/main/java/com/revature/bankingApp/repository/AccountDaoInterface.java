@@ -6,11 +6,11 @@ public interface AccountDaoInterface {
 	
 	
 
-	AccountDTO createAccount(Integer userId, Integer balance, Integer accountTypeId);
+//	AccountDTO createAccount(Integer userId, Integer balance, Integer accountTypeId);
 
 
-
-	AccountDTO createAccount(Integer userId, AccountDTO aDto);
+//
+//	AccountDTO createAccount(Integer userId, AccountDTO aDto);
 
 	AccountDTO getAccount(Integer accountId);
 
@@ -25,4 +25,8 @@ public interface AccountDaoInterface {
 	AccountDTO updateAccount(Integer accountId, String column, Double value);
 
 	boolean deleteAccount(Integer accountId);
+
+
+
+	AccountDTO createAccount(Integer userId, AccountDTO aDto);
 }

@@ -102,6 +102,36 @@ public class UserAccountsBridgeDao implements UserAccountsBridgeDaoInterface{
 		return resultList;
 		
 	}
+	
+	public Integer getUserAccountBridgeByAccountId(Integer accountId) {
+		
+		
+		consoleLogger.debug("Getting user bank account bridge: " + accountId);
+		fileLogger.debug("Get User from Database");
+		Integer result = null;
+		final String sql = "SELECT * FROM user_accounts_bridge WHERE account_id = '"+accountId+"';";
+		
+		try (Connection connection = ConnectionFactory.getConnection();
+				Statement statement = connection.createStatement();)
+			{
+				ResultSet set = statement.executeQuery(sql);
+				
+				
+				while (set.next()) {
+			         result = set.getInt(1); 
+			        
+			    }
+				
+				
+			} catch (SQLException e) {
+				// TODO Auto-generated catch block
+				consoleLogger.error(e.getMessage());
+				fileLogger.error(e.toString());
+			}
+		
+		return result;
+		
+	}
 
 	@Override
 	public void updateUserAccountBridge(Integer userId, Integer accountId) {

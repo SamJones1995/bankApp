@@ -25,7 +25,7 @@ public class LoginService implements UserLoginInterface{
 		
 		
 		
-		UserLoginDTO uDtoDB = uDao.getUserLogin(uDto);
+		UserLoginDTO uDtoDB = uDao.getUserLogin(username, password);
 		
 		if (uDtoDB.getUsername() == null) {
 			return null;
@@ -50,7 +50,7 @@ public class LoginService implements UserLoginInterface{
 		System.out.println(uLogDto.toString());
 		
 		
-		return null;
+		return uLogDto;
 	}
 
 	@Override

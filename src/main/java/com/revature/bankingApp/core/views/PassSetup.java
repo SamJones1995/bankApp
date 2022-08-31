@@ -39,5 +39,30 @@ public class PassSetup {
 		
 		
 	}
+	
+	public Boolean userNameSetup(String username) {
+		boolean isValid = false;
+		
+		while (isValid == false) {
+			
+			if (username.length() > 12) {
+				System.out.println("Do not exceed 12 characters");
+				break;
+			}
+			if (username.matches(".*[., _, !, #, $, %, ^, &, *, (, ), -, +, =, /, ?, `, ~, <, >].*")) {
+				System.out.println("Please use only alphanumeric characters");
+				break;
+			} else {
+	//			writeUsernameToDB(username);
+				System.out.println("Username accepted");
+				isValid = true;
+				
+				
+			}
+		
+		}
+		return isValid;
+		
+	}
 
 }

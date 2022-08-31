@@ -7,7 +7,7 @@ import com.revature.bankingApp.core.util.Util;
 
 @TestInstance(TestInstance.Lifecycle.PER_CLASS)
 
-public class ApplyAccountTest {
+public class UserDetailsEntryTest {
 	
 	@Test 
 	public void firstNameVal() {

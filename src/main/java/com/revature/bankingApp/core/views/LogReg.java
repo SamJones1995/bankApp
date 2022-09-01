@@ -4,7 +4,7 @@ package com.revature.bankingApp.core.views;
 import com.revature.bankingApp.core.util.Util;
 import com.revature.bankingApp.repository.UserDao;
 import com.revature.bankingApp.repository.UserDaoInterface;
-
+import com.revature.bankingApp.repository.exceptions.UserNotFoundException;
 import com.revature.bankingApp.services.LoginService;
 import com.revature.bankingApp.services.models.User;
 
@@ -13,12 +13,12 @@ import java.util.Scanner;
 import com.revature.bankingApp.Driver;
 import com.revature.bankingApp.controller.UserController;
 import com.revature.bankingApp.controller.UserLoginRegistration;
-import com.revature.bankingApp.core.UserLoginRegistrationEntries;
+
 
 
 public class LogReg {
 	
-	public static void loginReg() {
+	public static void loginReg() throws UserNotFoundException {
 		
 		
 		
@@ -45,7 +45,6 @@ public class LogReg {
 			
 		}
 		if (input.equals("REGISTER")){
-			System.out.println("Please enter Username do not exceed 12 characters");
 		
 			UserLoginRegistration.userLoginRegistration();
 			

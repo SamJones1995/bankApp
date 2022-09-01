@@ -1,28 +1,23 @@
-package com.revature.bankingApp.controller;
+package com.revature.bankingApp.core.views;
+
 
 import com.revature.bankingApp.core.util.Util;
-import com.revature.bankingApp.core.views.UserDetailsEntry;
 import com.revature.bankingApp.repository.UserDao;
 import com.revature.bankingApp.repository.UserLoginDao;
 import com.revature.bankingApp.repository.DTO.UserDTO;
 import com.revature.bankingApp.repository.DTO.UserLoginDTO;
+import com.revature.bankingApp.repository.exceptions.UserNotFoundException;
+import com.revature.bankingApp.services.Validation;
 
-import ch.qos.logback.core.recovery.ResilientSyslogOutputStream;
-
-public class UserMenu implements UserMenuInterface{
+public class UserMenu {
 	
 	
-	
-	
-	
-
-	
-	public static void Menu(Integer userLoginId) {
+	public static void Menu(Integer userLoginId) throws UserNotFoundException {
 		
 		UserLoginDTO uDto2 = UserLoginDao.getUserLoginById(userLoginId);
 		
-		System.out.println(UserLoginDao.getUserLoginById(userLoginId).toString());
-		System.out.println(uDto2.toString());
+	
+	
 		
 		Integer userId = uDto2.getUserId();
 		if (uDto2.getUserTypeId() == 2) {
@@ -30,8 +25,8 @@ public class UserMenu implements UserMenuInterface{
 		}
 		if (userId == 0) {
 			System.out.println("Please enter personal information");
-			
-			UserDetailsEntry.newUserSetup(userLoginId);
+			UserDetailsEntry uD = new UserDetailsEntry();
+			uD.newUserSetup(userLoginId);
 			
 			
 		} else {
@@ -78,46 +73,90 @@ public class UserMenu implements UserMenuInterface{
 					
 					if (attrToUpdate.equals("1")) {
 						System.out.println("Enter new first name");
-						String firstName = ApplicationEntries.firstNameEntry();
+						String firstName = Util.scanner.next();
 						
+						while (!Validation.isValidName(firstName)) {
+							System.out.println("Invalid entry please try again");
+							firstName = Util.scanner.next();
+
+						}
 						
 						UserDao.updateUser(uDto.getSsn(), "first_name", firstName);
 						
 						System.out.println("First Name now: " + firstName);
 						UserMenu.Menu(userLoginId);
 					}
+					
 					if (attrToUpdate.equals("2")) {
 						System.out.println("Enter new last name");
-						String lastName = ApplicationEntries.lastNameEntry();
+						String lastName = Util.scanner.next();
+						
+						while (!Validation.isValidName(lastName)) {
+							System.out.println("Invalid entry please try again");
+							lastName = Util.scanner.next();
+
+						}
+						
 						UserDao.updateUser(uDto.getSsn(), "last_name", lastName);
 						
 						System.out.println("Last Name now: " + lastName);
 						UserMenu.Menu(userLoginId);
 					}
+					
 					if (attrToUpdate.equals("3")) {
 						System.out.println("Enter new address");
-						String address = ApplicationEntries.addressEntry();
+						String address = Util.scanner.nextLine();
+						
+						while (Validation.isValidAddress(address)) {
+							System.out.println("Invalid entry please try again");
+							address = Util.scanner.nextLine();
+
+						}
+						
 						UserDao.updateUser(uDto.getSsn(), "address", address);
 						System.out.println("Address now: " + address);
 						UserMenu.Menu(userLoginId);
 					}
 					if (attrToUpdate.equals("4")) {
 						System.out.println("Enter new address line 2");
-						String address2 = ApplicationEntries.address2Entry();
+						String address2 = Util.scanner.nextLine();
+						
+						while (Validation.isValidAddress(address2)) {
+							System.out.println("Invalid entry please try again");
+							address2 = Util.scanner.nextLine();
+
+						}
+						
 						UserDao.updateUser(uDto.getSsn(), "address2", address2);
 						System.out.println("Address line 2 now: " + address2);
 						UserMenu.Menu(userLoginId);
 					}
+					
 					if (attrToUpdate.equals("5")) {
 						System.out.println("Enter new city");
-						String city = ApplicationEntries.cityEntry();
+						String city = Util.scanner.nextLine();
+						while (!Validation.isValidName(city)) {
+							System.out.println("Invalid entry please try again");
+							city = Util.scanner.next();
+
+						}
+						
 						UserDao.updateUser(uDto.getSsn(), "city", city);
 						System.out.println("City now: " + city);
 						UserMenu.Menu(userLoginId);
 					}
+					
 					if (attrToUpdate.equals("6")) {
 						System.out.println("Enter new state");
-						String state = ApplicationEntries.stateEntry();
+						String state = Util.scanner.next();
+						
+						while (!Validation.isValidState(state)) {
+							System.out.println("Invalid entry please try again");
+							state = Util.scanner.next();
+
+						}
+						
+						
 						UserDao.updateUser(uDto.getSsn(), "city", state);
 						System.out.println("City now: " + state);
 						UserMenu.Menu(userLoginId);
@@ -125,14 +164,28 @@ public class UserMenu implements UserMenuInterface{
 					
 					if (attrToUpdate.equals("7")) {
 						System.out.println("Enter new zip code");
-						Integer zip = ApplicationEntries.zipEntry();
-						UserDao.updateUser(uDto.getSsn(), "city", zip);
+						String zip = Util.scanner.next();
+						
+						while (!Validation.isValidZip(zip)) {
+							System.out.println("Invalid entry please try again");
+							zip = Util.scanner.next();
+
+						}
+						
+						UserDao.updateUser(uDto.getSsn(), "city", Integer.valueOf(zip));
 						System.out.println("City now: " + zip);
 						UserMenu.Menu(userLoginId);
 					}
+					
 					if (attrToUpdate.equals("8")) {
 						System.out.println("Enter new email");
-						String email = ApplicationEntries.emailEntry();
+						String email = Util.scanner.next();
+						while (Validation.isValidEmail(email)) {
+							System.out.println("Invalid entry please try again");
+							email = Util.scanner.next();
+
+						}
+						
 						UserDao.updateUser(uDto.getSsn(), "city", email);
 						System.out.println("City now: " + email);
 						UserMenu.Menu(userLoginId);
@@ -160,34 +213,6 @@ public class UserMenu implements UserMenuInterface{
 	
 	
 
-	@Override
-	public void viewAccounts() {
-		// TODO Auto-generated method stub
-		
-	}
-
-	@Override
-	public void viewUserInfo() {
-		// TODO Auto-generated method stub
-		
-	}
-
-	@Override
-	public void withdrawFromAccount() {
-		// TODO Auto-generated method stub
-		
-	}
-
-	@Override
-	public void depositToAccount() {
-		// TODO Auto-generated method stub
-		
-	}
-
-	@Override
-	public void transferToAccount() {
-		// TODO Auto-generated method stub
-		
-	}
+	
 
 }

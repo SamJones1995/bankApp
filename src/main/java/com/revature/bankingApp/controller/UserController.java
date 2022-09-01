@@ -2,9 +2,10 @@ package com.revature.bankingApp.controller;
 
 import java.util.Scanner;
 
+import com.revature.bankingApp.core.views.UserMenu;
 import com.revature.bankingApp.repository.DTO.UserLoginDTO;
+import com.revature.bankingApp.repository.exceptions.UserNotFoundException;
 import com.revature.bankingApp.services.LoginService;
-import com.revature.bankingApp.services.models.UserLogin;
 
 public class UserController implements UserInputInterface{
 	
@@ -26,7 +27,6 @@ public class UserController implements UserInputInterface{
 		
 		
 		UserLoginDTO user = loginService.login(username, password);
-		System.out.println("validate login user: " + user.toString());
 		return user;
 		
 	
@@ -40,9 +40,9 @@ public class UserController implements UserInputInterface{
 	}
 	
 	public void login() {
-		System.out.println("Please input username \n");
+		System.out.println("Please input username");
 		String username = getUserInput();
-		System.out.println("Please input password \n");
+		System.out.println("Please input password");
 		String password = getUserInput();
 		
 		try {
@@ -55,7 +55,7 @@ public class UserController implements UserInputInterface{
 			System.out.println("failed login");
 		}
 		
-		} catch (NullPointerException e ) {
+		} catch (NullPointerException | UserNotFoundException e ) {
 			System.out.println("Invalid login");
 		}
 		

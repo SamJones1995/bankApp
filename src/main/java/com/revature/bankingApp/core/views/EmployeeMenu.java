@@ -1,4 +1,4 @@
-package com.revature.bankingApp.controller;
+package com.revature.bankingApp.core.views;
 
 import java.util.ArrayList;
 
@@ -9,10 +9,11 @@ import com.revature.bankingApp.repository.UserAccountsBridgeDao;
 import com.revature.bankingApp.repository.UserDao;
 import com.revature.bankingApp.repository.DTO.UserDTO;
 import com.revature.bankingApp.repository.DTO.UserLoginDTO;
+import com.revature.bankingApp.repository.exceptions.UserNotFoundException;
 
 public class EmployeeMenu {
 	
-	public static void employeeMenu(UserLoginDTO uDto2) {
+	public static void employeeMenu(UserLoginDTO uDto2) throws UserNotFoundException {
 		System.out.println("Please type a number corresponding to the options below and hit ENTER"); 
 		System.out.println("1 - Accounts and Balances");
 		System.out.println("2 - User Information");
@@ -33,7 +34,8 @@ public class EmployeeMenu {
 			
 			
 			for (int i = 0; i < userList.size(); i++) {
-				UserDTO uDto = UserDao.getUserById(userList.get(i));
+				
+					UserDTO uDto = UserDao.getUserById(userList.get(i));
 
 				System.out.println(uDto.toString());
 				
@@ -78,7 +80,7 @@ public class EmployeeMenu {
 			}
 			
 			UserDao userDao = new UserDao();
-			UserDTO uDto = userDao.getUserById(userIdEntry);
+			UserDTO uDto = UserDao.getUserById(userIdEntry);
 			
 			
 			System.out.println(uDto.getFirstName() + " " + uDto.getLastName());

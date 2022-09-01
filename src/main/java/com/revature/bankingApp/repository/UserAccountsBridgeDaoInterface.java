@@ -6,16 +6,6 @@ import com.revature.bankingApp.repository.DTO.AccountDTO;
 import com.revature.bankingApp.repository.DTO.UserDTO;
 
 public interface UserAccountsBridgeDaoInterface {
-	
-	void createUserAccountBridge();
-	
-	ArrayList<Integer> getUserAccountBridge(UserDTO userId);
-	
-	void updateUserAccountBridge(UserDTO userId, AccountDTO accountId);
-	
-	void deleteUserAccountBridge(UserDTO userId, AccountDTO accountId);
-
-	void createUserAccountBridge(UserDTO userId, AccountDTO accountId);
 
 	void createUserAccountBridge(Integer userId, Integer accountId);
 
@@ -25,3 +15,12 @@ public interface UserAccountsBridgeDaoInterface {
 
 	void deleteUserAccountBridge(Integer userId, Integer accountId);
 }
+
+
+
+
+
+
+
+
+

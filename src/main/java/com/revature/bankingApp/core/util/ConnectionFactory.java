@@ -27,7 +27,7 @@ public class ConnectionFactory {
 			
 			connection = DriverManager.getConnection(url, databaseUser, databasePassword);
 			
-			System.out.println("Connection Success");
+//			System.out.println("Connection Success");
 		} catch (SQLException e) {
 			System.out.println("Connection Failure" + url);
 			e.printStackTrace();

@@ -4,9 +4,9 @@ import java.util.Objects;
 
 public class EmployeeAssignmentsDTO {
 	
-	private Integer userId;
+	protected Integer userId;
 	
-	private Integer userLoginId;
+	protected Integer userLoginId;
 	
 	
 

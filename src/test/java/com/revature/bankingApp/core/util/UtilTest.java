@@ -2,10 +2,10 @@ package com.revature.bankingApp.core.util;
 
 import static org.junit.jupiter.api.Assertions.assertEquals;
 
-
-
 import org.junit.jupiter.api.Test;
 import org.junit.jupiter.api.TestInstance;
+
+import com.revature.bankingApp.services.Validation;
 
 
 
@@ -19,7 +19,7 @@ public class UtilTest {
 		
 		
 		
-		assertEquals(true, Util.isValidPass("password1!"));
+		assertEquals(true, Validation.isValidPass("password1!"));
 	}
 	
 	

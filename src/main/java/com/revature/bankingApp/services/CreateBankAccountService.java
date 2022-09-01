@@ -1,14 +1,15 @@
 package com.revature.bankingApp.services;
 
-import com.revature.bankingApp.controller.UserMenu;
 import com.revature.bankingApp.core.util.Util;
+import com.revature.bankingApp.core.views.UserMenu;
 import com.revature.bankingApp.repository.AccountDao;
 import com.revature.bankingApp.repository.UserAccountsBridgeDao;
 import com.revature.bankingApp.repository.DTO.AccountDTO;
+import com.revature.bankingApp.repository.exceptions.UserNotFoundException;
 
 public class CreateBankAccountService {
 	
-	public static void createBankAccount(Integer userId) {
+	public static void createBankAccount(Integer userId) throws UserNotFoundException {
 		
 		String checking = "Checking";
 		String savings = "Savings";
@@ -38,13 +39,14 @@ public class CreateBankAccountService {
 		
 		Double balance = Util.scanner.nextDouble();
 		
-		System.out.println("You are applying for a " + accountTypeString + "account with an initial deposit of " + balance);
+		System.out.println("You are applying for a " + accountTypeString + " account with an initial deposit of " + balance);
 		System.out.println("Please enter CONFIRM to submit application or CANCEL to return to menu");
 			String entry = Util.scanner.next();
 			
 			if (entry.equals("CONFIRM")) {
 				
 				AccountDao.createAccount(userId, balance, accountType);
+				UserMenu.Menu(userId);
 				
 			}
 			if (entry.equals("CANCEL")) {

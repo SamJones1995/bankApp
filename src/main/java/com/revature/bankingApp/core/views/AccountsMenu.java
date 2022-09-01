@@ -1,18 +1,18 @@
-package com.revature.bankingApp.controller;
+package com.revature.bankingApp.core.views;
 
 import java.util.ArrayList;
 
 import com.revature.bankingApp.core.util.Util;
-import com.revature.bankingApp.core.views.UserDetailsEntry;
 import com.revature.bankingApp.repository.AccountDao;
 import com.revature.bankingApp.repository.UserAccountsBridgeDao;
 import com.revature.bankingApp.repository.UserLoginDao;
 import com.revature.bankingApp.repository.DTO.AccountDTO;
+import com.revature.bankingApp.repository.exceptions.UserNotFoundException;
 import com.revature.bankingApp.services.CreateBankAccountService;
 
 public class AccountsMenu {
 	
-	public static void accountsMenu(Integer userLoginId, Integer userId) {
+	public static void accountsMenu(Integer userLoginId, Integer userId)  {
 		
 		System.out.println("Please enter 1 to view accounts and 2 to apply for new account");
 		
@@ -33,18 +33,29 @@ public class AccountsMenu {
 				
 			}
 			
+			
 			System.out.println("To make a transaction enter 1 or to go back to User menu enter 2");
 			
 			Integer entry2 = Util.scanner.nextInt();
 			
 			if (entry2.equals(1)) { 
 				
-				TransactionMenu.transactionMenu(UserLoginDao.getUserLoginById(userLoginId));
+				try {
+					TransactionMenu.transactionMenu(UserLoginDao.getUserLoginById(userLoginId));
+				} catch (UserNotFoundException e) {
+					// TODO Auto-generated catch block
+					e.printStackTrace();
+				}
 				
 			}
 			
 			if (entry2.equals(2)) {
-				UserMenu.Menu(userId);
+				try {
+					UserMenu.Menu(userId);
+				} catch (UserNotFoundException e) {
+					// TODO Auto-generated catch block
+					e.printStackTrace();
+				}
 			}
 			
 			
@@ -52,7 +63,12 @@ public class AccountsMenu {
 		}
 		
 		if (entry.equals(2)) {
-			CreateBankAccountService.createBankAccount(userId);
+			try {
+				CreateBankAccountService.createBankAccount(userId);
+			} catch (UserNotFoundException e) {
+				// TODO Auto-generated catch block
+				e.printStackTrace();
+			}
 //			UserDetailsEntry.newUserSetup(userId);
 			
 		}

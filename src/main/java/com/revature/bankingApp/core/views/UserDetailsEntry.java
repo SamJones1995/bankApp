@@ -1,161 +1,188 @@
 package com.revature.bankingApp.core.views;
 
-import java.util.regex.Matcher;
-import java.util.regex.Pattern;
-
-import com.revature.bankingApp.controller.ApplicationEntries;
-import com.revature.bankingApp.controller.UserMenu;
-import com.revature.bankingApp.core.Validation;
 import com.revature.bankingApp.core.util.Util;
 import com.revature.bankingApp.repository.UserDao;
 import com.revature.bankingApp.repository.UserLoginDao;
 import com.revature.bankingApp.repository.DTO.UserDTO;
+import com.revature.bankingApp.repository.exceptions.UserNotFoundException;
+import com.revature.bankingApp.services.Validation;
 
 public class UserDetailsEntry {
 	static String regexName = "^[A-Za-z]{1,15}$";
+
+	protected String firstName;
 	
-	protected static String firstName = "";
+	protected String lastName;
+	
+	protected String address;
+
+	protected String address2;
+	
+	protected String city;
+	
+	protected String state;
+	
+	protected String zip;
+	
+	protected String ssn;
+	
+	protected String email;
 	
 	
+
 	
-	
-	public static void newUserSetup(Integer userLoginId) {
+	public void newUserSetup(Integer userLoginId) throws UserNotFoundException {
 		System.out.println("Would you like to apply to open an account? Enter YES or NO");
 		String application = Util.scanner.next();
 		if (application.equals("YES")) {
+
+			System.out.println("Please enter First Name");
+
+			firstName = Util.scanner.next();
+
+			while (!Validation.isValidName(firstName)) {
+				System.out.println("Invalid entry please try again");
+				firstName = Util.scanner.next();
+
+			}
 			
-			String firstName = ApplicationEntries.firstNameEntry();
+			System.out.println("Please enter Last Name");
+
+			lastName = Util.scanner.next();
+			
+			while (!Validation.isValidName(lastName)) {
+				System.out.println("Invalid entry please try again");
+				lastName = Util.scanner.next();
+
+			}
+			Util.scanner.nextLine();
+			System.out.println("Pleae enter address");
+			
+			address = Util.scanner.nextLine();
+			
+			while (Validation.isValidAddress(address)) {
+				System.out.println("Invalid entry please try again");
+				address = Util.scanner.nextLine();
+
+			}
 			
 			
-		
+			
+			System.out.println("Do you have a second address line? Enter YES or NO");
+			
+			String entry = Util.scanner.next();
+			if (entry.equals("YES")) {
+				Util.scanner.nextLine();
+				System.out.println("Please enter address line 2");
+				address2 = Util.scanner.nextLine();
+			
+				
+				while (Validation.isValidAddress(address2)) {
+					System.out.println("Invalid entry please try again");
+					address2 = Util.scanner.nextLine();
+
+				}
 				
 				
-//				
-//				System.out.println("Please enter First Name");	
-//				
-//				String name = Util.scanner.next();
-//				
-//				
-//				
-//				 Pattern pattern = Pattern.compile(regexName);
-//			    Matcher matcher = pattern.matcher(name);
-//			    
-//			    boolean bool = true;
-//				
-//				while (bool) {    
-//					if (matcher.matches() == true) {
-//					
-//						System.out.println("You entered " + name);
-//						
-//						firstName = name;;
-//						bool = false;
-//						
-//					} else {
-//						System.out.println("Please enter valid name");
-//						ApplicationEntries.firstNameEntry();
-//						
-//					}
-//				}
+			}
+			
+			if (entry.equals("NO")) {
+				String address2 = null;
 				
+			}
 			
 			
+			System.out.println("Pleae enter city");
 			
+			city = Util.scanner.next();
 			
-			String lastName = ApplicationEntries.lastNameEntry();
+			while (!Validation.isValidName(city)) {
+				System.out.println("Invalid entry please try again");
+				city = Util.scanner.next();
+
+			}
+
+			System.out.println("Pleae enter state");
 			
-			String address = ApplicationEntries.addressEntry();
+			state = Util.scanner.next();
 			
-			String address2 = ApplicationEntries.address2Entry();
+			while (!Validation.isValidState(state)) {
+				System.out.println("Invalid entry please try again");
+				state = Util.scanner.next();
+
+			}
+
+			System.out.println("Pleae enter zip");
 			
-			String city = ApplicationEntries.cityEntry();
+			zip = Util.scanner.next();
 			
-			String state = ApplicationEntries.stateEntry();
+			while (!Validation.isValidZip(zip)) {
+				System.out.println("Invalid entry please try again");
+				zip = Util.scanner.next();
+
+			}
+
+			System.out.println("Pleae enter SSN");
 			
-			Integer zip = ApplicationEntries.zipEntry();
+			ssn = Util.scanner.next();
 			
-			Integer ssn = ApplicationEntries.ssnEntry();
+			while (!Validation.isValidSsn(ssn)) {
+				System.out.println("Invalid entry please try again");
+				ssn = Util.scanner.next();
+
+			}
+
+			System.out.println("Pleae enter email");
 			
-			String email = ApplicationEntries.emailEntry();
+			email = Util.scanner.next();
 			
-			System.out.println("Please enter CONFIRM with the following information is correct. Or enter CANCEL to try again");
-			
+			while (Validation.isValidEmail(email)) {
+				System.out.println("Invalid entry please try again");
+				email = Util.scanner.next();
+
+			}
+
+			System.out.println(
+					"Please enter CONFIRM with the following information is correct. Or enter CANCEL to try again");
+
 			System.out.println(firstName + " " + lastName);
 			System.out.println(address + " " + address2);
 			System.out.println(city + " " + state + " " + zip);
 			System.out.println("SSN: " + ssn);
 			System.out.println("Email: " + email);
-			
+
 			String confirmation = Util.scanner.next();
-			
-			if (confirmation.equals("CONFIRM")) {
-				UserDao uDao = new UserDao();
-				UserDTO uDto = new UserDTO(firstName, lastName, address, address2, city, state,
-						zip, ssn, email);
-				uDao.createUser(uDto);
-				
-				
-				UserLoginDao.updateUserLogin(userLoginId, "user_id", UserDao.getUser(ssn).getUserId());
-				
-				UserMenu.Menu(userLoginId);
-				
-				
-			}
-			
-			if (confirmation.equals("CANCEL")) {
-				UserDetailsEntry.newUserSetup(userLoginId);
-			}
-//
-//			if (Validation.nameValidate() == true) {
-//				
-//			}
-			
-					
-//					if (firstName.length() > 15) {
-//						System.out.println("Do not exceed 15 characters");
-//						applyAccount();
-//					}
-//					if (firstName.matches(".*[., _, !, #, $, %, ^, &, *, (, ), -, +, =, /, ?, `, ~, <, >].*")) {
-//						System.out.println("Please use only alphanumeric characters");
-//						applyAccount();
-//					} else 
-//					
-//					System.out.println("Please enter Last Name");
-//					String lastName = Util.scanner.next();
-//					if (lastName.length() > 15) {
-//						System.out.println("Do not exceed 15 characters");
-//						applyAccount();
-//					}
-//					if (lastName.matches(".*[., _, !, #, $, %, ^, &, *, (, ), -, +, =, /, ?, `, ~, <, >].*")) {
-//						System.out.println("Please use only alphanumeric characters");
-//						applyAccount();
-//					} else {
-//		//				writeFirstNameToDB(username);
-//						System.out.println("Last Name accepted");
-//						
-//					}
-//					{
-//		//				writeFirstNameToDB(username);
-//						
-//						
-//					}
-			
-		if (application.equals("NO")) {
-			System.out.println("Would you like to return to main menu?");
-			String backToMain = Util.scanner.next();
-			if (backToMain.equals("NO")) {
-				System.out.println("Terminal End");
-			}
-			if (backToMain.equals("YES")) {
-				LogReg.loginReg();
+
+				if (confirmation.equals("CONFIRM")) {
+					UserDao uDao = new UserDao();
+					UserDTO uDto = new UserDTO(firstName, lastName, address, address2, city, state, Integer.valueOf(zip), Integer.valueOf(ssn), email);
+					uDao.createUser(uDto);
+	
+					UserLoginDao.updateUserLogin(userLoginId, "user_id", UserDao.getUser(Integer.valueOf(ssn)).getUserId());
+	
+					UserMenu.Menu(userLoginId);
+	
+				}
+	
+				if (confirmation.equals("CANCEL")) {
+					UserDetailsEntry uD = new UserDetailsEntry();
+					uD.newUserSetup(userLoginId);
+				}
+
+
+			if (application.equals("NO")) {
+				System.out.println("Would you like to return to main menu?");
+				String backToMain = Util.scanner.next();
+				if (backToMain.equals("NO")) {
+					newUserSetup(userLoginId);
+				}
+				if (backToMain.equals("YES")) {
+					UserMenu.Menu(userLoginId);
+				}
 			}
 		}
-	}
-		
 
 	}
 
-	private void appNameEntry() {
-		// TODO Auto-generated method stub
-		
-	}
+
 }

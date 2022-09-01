@@ -1,4 +1,4 @@
-package com.revature.bankingApp.controller;
+package com.revature.bankingApp.core.views;
 
 import java.util.ArrayList;
 
@@ -6,13 +6,12 @@ import com.revature.bankingApp.core.util.Util;
 import com.revature.bankingApp.repository.AccountDao;
 import com.revature.bankingApp.repository.EmployeeAssignmentDao;
 import com.revature.bankingApp.repository.UserAccountsBridgeDao;
-import com.revature.bankingApp.repository.UserDao;
 import com.revature.bankingApp.repository.DTO.AccountDTO;
-import com.revature.bankingApp.repository.DTO.UserDTO;
 import com.revature.bankingApp.repository.DTO.UserLoginDTO;
+import com.revature.bankingApp.repository.exceptions.UserNotFoundException;
 
 public class ApproveDenyMenu {
-	public static void approveDeny(UserLoginDTO uDto, Integer userId) {
+	public static void approveDeny(UserLoginDTO uDto, Integer userId) throws UserNotFoundException {
 		
 		
 			System.out.println("Your accounts: ");

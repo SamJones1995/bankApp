@@ -1,4 +1,4 @@
-package com.revature.bankingApp.controller;
+package com.revature.bankingApp.core.views;
 
 import java.util.ArrayList;
 
@@ -7,10 +7,11 @@ import com.revature.bankingApp.repository.AccountDao;
 import com.revature.bankingApp.repository.UserAccountsBridgeDao;
 import com.revature.bankingApp.repository.DTO.AccountDTO;
 import com.revature.bankingApp.repository.DTO.UserLoginDTO;
+import com.revature.bankingApp.repository.exceptions.UserNotFoundException;
 
 public class EmployeeAccountsMenu {
 	
-public static void employeeAccountsMenu(UserLoginDTO uDto2, Integer userId) {
+public static void employeeAccountsMenu(UserLoginDTO uDto2, Integer userId) throws UserNotFoundException {
 		
 			AccountDao aDao = new AccountDao();
 			UserAccountsBridgeDao uDao = new UserAccountsBridgeDao();

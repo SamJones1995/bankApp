@@ -6,11 +6,7 @@ public interface AccountDaoInterface {
 	
 	
 
-//	AccountDTO createAccount(Integer userId, Integer balance, Integer accountTypeId);
 
-
-//
-//	AccountDTO createAccount(Integer userId, AccountDTO aDto);
 
 	AccountDTO getAccount(Integer accountId);
 
@@ -28,5 +24,5 @@ public interface AccountDaoInterface {
 
 
 
-	AccountDTO createAccount(Integer userId, AccountDTO aDto);
+	
 }

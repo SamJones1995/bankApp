@@ -1,24 +1,22 @@
-package com.revature.bankingApp.controller;
+package com.revature.bankingApp.core.views;
 
 import com.revature.bankingApp.core.util.Util;
 import com.revature.bankingApp.repository.AccountDao;
 import com.revature.bankingApp.repository.EmployeeAssignmentDao;
 import com.revature.bankingApp.repository.UserLoginDao;
 import com.revature.bankingApp.repository.DTO.UserLoginDTO;
+import com.revature.bankingApp.repository.exceptions.UserNotFoundException;
+import com.revature.bankingApp.services.ValidateAccountOwner;
 
-public class EmployeeTransactionMenu {
+public class TransactionMenu {
 	
-public static void employeeTransactionMenu(UserLoginDTO userLogDto) {
+	public static void transactionMenu(UserLoginDTO uDto) throws UserNotFoundException {
 		
 		EmployeeAssignmentDao eDao = new EmployeeAssignmentDao();
 		
 		AccountDao aDao = new AccountDao();
-		UserLoginDao uDao = new UserLoginDao();
-//		
-//		UserLoginDTO userLogDto = uDao.getUserLogin(userLogId);
-		
-		Integer userType = userLogDto.getUserTypeId();
-		
+		Integer userType = uDto.getUserTypeId();
+		System.out.println(uDto.toString());
 		
 		
 		System.out.println("Please enter the corresponding number to the below options");
@@ -26,10 +24,6 @@ public static void employeeTransactionMenu(UserLoginDTO userLogDto) {
 		System.out.println("2 - Deposit");
 		System.out.println("3 - Transfer");
 		System.out.println("4 - GO BACK");
-		if (userType ==3) {
-			System.out.println("5 - Delete Account");
-		}
-		
 		
 		Integer entry = Util.scanner.nextInt();
 		
@@ -37,9 +31,9 @@ public static void employeeTransactionMenu(UserLoginDTO userLogDto) {
 			System.out.println("Please enter the account number you would like to draw from");
 			Integer accountToWithdraw = Util.scanner.nextInt();
 			
-			if (!(eDao.getEmployeeAssignment(userLogDto.getUserLoginId()).contains(accountToWithdraw)) && (userType == 2)){
-				System.out.println("You can only withdraw from client accounts assigned to you");
-				EmployeeTransactionMenu.employeeTransactionMenu(userLogDto);
+			if (((ValidateAccountOwner.validateAccountOwner(accountToWithdraw, uDto.getUserId())) == false) && (userType == 1)){
+				System.out.println("You can only withdraw from approved accounts that you own");
+				TransactionMenu.transactionMenu(uDto);
 			}
 			
 			
@@ -50,12 +44,12 @@ public static void employeeTransactionMenu(UserLoginDTO userLogDto) {
 			
 			if (amountToWithdraw < 0) {
 				System.out.println("Please enter a positive number");
-				EmployeeTransactionMenu.employeeTransactionMenu(userLogDto);
+				TransactionMenu.transactionMenu(uDto);
 			}
 			
 			if (amountToWithdraw > aDao.getAccount(accountToWithdraw).getBalance()) {
 				System.out.println("Please enter an amount less than the total balance of account: " + accountToWithdraw + "balance: " + aDao.getAccount(accountToWithdraw).getBalance());
-				EmployeeTransactionMenu.employeeTransactionMenu(userLogDto);
+				TransactionMenu.transactionMenu(uDto);
 			}
 			
 			System.out.println("You wish to withdraw " + amountToWithdraw + "from account number " + accountToWithdraw + "?");
@@ -67,11 +61,11 @@ public static void employeeTransactionMenu(UserLoginDTO userLogDto) {
 //				AccountDao aDao = new AccountDao();
 				
 				aDao.subtractFromAccountBalance(accountToWithdraw, amountToWithdraw);
-				TransactionMenu.transactionMenu(userLogDto);
+				TransactionMenu.transactionMenu(uDto);
 			} 
 			
 			if (entry2.equals("CANCEL")){
-				TransactionMenu.transactionMenu(userLogDto);
+				TransactionMenu.transactionMenu(uDto);
 			}
 		}
 		
@@ -85,7 +79,7 @@ public static void employeeTransactionMenu(UserLoginDTO userLogDto) {
 			
 			if (amountToDeposit < 0) {
 				System.out.println("Please enter a positive number");
-				EmployeeTransactionMenu.employeeTransactionMenu(userLogDto);
+				TransactionMenu.transactionMenu(uDto);
 			}
 			
 			System.out.println("You wish to deposit " + amountToDeposit + "to account number " + accountToDeposit + "?");
@@ -100,7 +94,7 @@ public static void employeeTransactionMenu(UserLoginDTO userLogDto) {
 			} 
 			
 			if (entry2.equals("CANCEL")){
-				EmployeeTransactionMenu.employeeTransactionMenu(userLogDto);
+				TransactionMenu.transactionMenu(uDto);
 			}
 		}
 		
@@ -109,22 +103,20 @@ public static void employeeTransactionMenu(UserLoginDTO userLogDto) {
 			Integer accountToDepositTo = Util.scanner.nextInt();
 			System.out.println("Please enter the account you wish to withdraw from");
 			Integer accountToWithdrawFrom = Util.scanner.nextInt();
-			
-			if (!(eDao.getEmployeeAssignment(userLogDto.getUserLoginId()).contains(accountToWithdrawFrom)) && (userType == 2)){
-				System.out.println("You can only withdraw from client accounts assigned to you");
-				EmployeeTransactionMenu.employeeTransactionMenu(userLogDto);
+			if (((ValidateAccountOwner.validateAccountOwner(accountToWithdrawFrom, uDto.getUserId())) == false) && (userType == 1)){
+				System.out.println("You can only withdraw from approved accounts that you own");
+				TransactionMenu.transactionMenu(uDto);
 			}
-			
 			System.out.println("Please enter the ammount you wish to transfer");
 			Double amountToTransfer = Util.scanner.nextDouble();
 			if (amountToTransfer < 0) {
 				System.out.println("Please enter a positive number");
-				EmployeeTransactionMenu.employeeTransactionMenu(userLogDto);			
-				}
+				TransactionMenu.transactionMenu(uDto);
+			}
 			
 			if (amountToTransfer > aDao.getAccount(accountToWithdrawFrom).getBalance()) {
 				System.out.println("Please enter an amount less than the total balance of account: " + accountToWithdrawFrom + "balance: " + aDao.getAccount(accountToWithdrawFrom).getBalance());
-				EmployeeTransactionMenu.employeeTransactionMenu(userLogDto);
+				TransactionMenu.transactionMenu(uDto);
 			}
 			
 			
@@ -140,27 +132,13 @@ public static void employeeTransactionMenu(UserLoginDTO userLogDto) {
 			} 
 			
 			if (entry2.equals("CANCEL")){
-				EmployeeTransactionMenu.employeeTransactionMenu(userLogDto);
+				TransactionMenu.transactionMenu(uDto);
 			}
-		}
-		if (entry.equals(4)) {
-			EmployeeTransactionMenu.employeeTransactionMenu(userLogDto);
 		}
 		
-		if (userType == 3) {
-			if (entry.equals(5)) {
-				System.out.println("Please enter the account ID you would like to delete");
-				Integer accountToDelete = Util.scanner.nextInt();
-				
-				System.out.println("Enter CONFIRM to permenantly delete account ID " + accountToDelete);
-				
-				String confirmDelete = Util.scanner.next();
-				
-				if (confirmDelete.equals("CONFIRM")) {
-					aDao.deleteAccount(accountToDelete);
-					EmployeeTransactionMenu.employeeTransactionMenu(userLogDto);
-				}
-			}
+		if (entry.equals(4)) {
+			UserMenu.Menu(uDto.getUserLoginId());
 		}
 	}
+
 }

@@ -685,3 +685,236 @@
 22:40:49.414 [main] DEBUG fileLogger - Add bank account to User Database
 22:40:49.741 [main] ERROR fileLogger - org.postgresql.util.PSQLException: No results were returned by the query.
 22:42:00.475 [main] DEBUG fileLogger - Get User login from Database
+22:53:54.096 [main] DEBUG fileLogger - Get User login from Database
+22:54:01.922 [main] DEBUG fileLogger - Get Users by employee from Database
+22:54:16.692 [main] DEBUG fileLogger - Get User from Database
+22:54:17.038 [main] DEBUG fileLogger - Get User from Database
+22:54:17.367 [main] DEBUG fileLogger - Get User from Database
+22:54:17.688 [main] DEBUG fileLogger - Get User from Database
+22:54:17.999 [main] DEBUG fileLogger - Get User from Database
+22:54:18.330 [main] DEBUG fileLogger - Get User from Database
+22:54:37.331 [main] DEBUG fileLogger - Get Users by employee from Database
+22:54:37.690 [main] DEBUG fileLogger - Get User from Database
+22:54:38.244 [main] DEBUG fileLogger - Get User from Database
+22:54:38.679 [main] DEBUG fileLogger - Get User from Database
+22:54:39.273 [main] DEBUG fileLogger - Get User from Database
+22:54:39.891 [main] DEBUG fileLogger - Get User from Database
+22:54:59.145 [main] DEBUG fileLogger - Update account from Database
+22:54:59.470 [main] ERROR fileLogger - org.postgresql.util.PSQLException: No results were returned by the query.
+22:55:06.553 [main] DEBUG fileLogger - Get Users by employee from Database
+00:24:13.514 [main] DEBUG fileLogger - Get User login from Database
+00:24:42.466 [main] DEBUG fileLogger - Get User from Database
+00:24:42.814 [main] ERROR fileLogger - org.postgresql.util.PSQLException: No results were returned by the query.
+00:25:00.715 [main] DEBUG fileLogger - Get User from Database
+00:25:01.068 [main] DEBUG fileLogger - Get User from Database
+00:25:01.486 [main] DEBUG fileLogger - Get User from Database
+00:25:01.809 [main] DEBUG fileLogger - Get User from Database
+00:25:02.131 [main] DEBUG fileLogger - Get User from Database
+10:40:25.225 [main] DEBUG fileLogger - Get User from Database
+10:40:25.910 [main] ERROR fileLogger - org.postgresql.util.PSQLException: ERROR: column "test" of relation "users" does not exist
+  Position: 18
+10:41:38.211 [main] DEBUG fileLogger - Get User from Database
+10:41:38.854 [main] ERROR fileLogger - org.postgresql.util.PSQLException: ERROR: column "test" of relation "users" does not exist
+  Position: 18
+10:50:00.606 [main] DEBUG fileLogger - Get User from Database
+10:50:01.249 [main] ERROR fileLogger - org.postgresql.util.PSQLException: ERROR: column "test" of relation "users" does not exist
+  Position: 18
+10:50:46.460 [main] DEBUG fileLogger - Get User from Database
+10:50:47.099 [main] ERROR fileLogger - org.postgresql.util.PSQLException: No results were returned by the query.
+10:52:54.645 [main] DEBUG fileLogger - Get User from Database
+10:52:55.289 [main] ERROR fileLogger - org.postgresql.util.PSQLException: No results were returned by the query.
+10:54:43.399 [main] DEBUG fileLogger - Get User from Database
+10:54:44.031 [main] ERROR fileLogger - org.postgresql.util.PSQLException: No results were returned by the query.
+12:08:49.997 [main] DEBUG fileLogger - Get User login from Database
+12:09:03.467 [main] DEBUG fileLogger - Get User from Database
+12:09:03.801 [main] DEBUG fileLogger - Get account from Database with accountId 17
+12:09:04.142 [main] DEBUG fileLogger - Get account from Database with accountId 18
+12:09:04.481 [main] DEBUG fileLogger - Get account from Database with accountId 19
+12:09:04.804 [main] DEBUG fileLogger - Get account from Database with accountId 20
+12:10:18.289 [main] DEBUG fileLogger - Get User login from Database
+12:10:23.231 [main] DEBUG fileLogger - Get User from Database
+12:10:23.581 [main] DEBUG fileLogger - Get account from Database with accountId 17
+12:10:23.918 [main] DEBUG fileLogger - Get account from Database with accountId 18
+12:10:24.283 [main] DEBUG fileLogger - Get account from Database with accountId 19
+12:10:24.650 [main] DEBUG fileLogger - Get account from Database with accountId 20
+12:46:39.772 [main] DEBUG fileLogger - Get User from Database
+12:46:57.028 [main] DEBUG fileLogger - Get User from Database
+12:47:01.483 [main] DEBUG fileLogger - Get account from Database with accountId 17
+12:47:01.905 [main] DEBUG fileLogger - Get account from Database with accountId 17
+12:47:09.764 [main] DEBUG fileLogger - Get User from Database
+12:47:11.878 [main] DEBUG fileLogger - Get account from Database with accountId 17
+12:47:15.141 [main] DEBUG fileLogger - Subtracting 5.0from accountId: 17
+12:47:15.141 [main] DEBUG fileLogger - Get account from Database with accountId 17
+12:47:15.857 [main] ERROR fileLogger - org.postgresql.util.PSQLException: No results were returned by the query.
+12:47:28.484 [main] DEBUG fileLogger - Get User from Database
+12:47:28.839 [main] ERROR fileLogger - org.postgresql.util.PSQLException: No results were returned by the query.
+12:47:56.107 [main] DEBUG fileLogger - Get User login from Database
+12:48:04.218 [main] DEBUG fileLogger - Get Users by employee from Database
+12:48:07.904 [main] DEBUG fileLogger - Get User from Database
+12:48:08.256 [main] DEBUG fileLogger - Get User from Database
+12:48:08.616 [main] DEBUG fileLogger - Get account from Database with accountId 15
+12:48:08.968 [main] DEBUG fileLogger - Get account from Database with accountId 16
+12:50:05.844 [main] DEBUG fileLogger - Get User login from Database
+12:50:11.661 [main] DEBUG fileLogger - Get Users by employee from Database
+12:50:16.383 [main] DEBUG fileLogger - Get User from Database
+12:50:16.756 [main] DEBUG fileLogger - Get User from Database
+12:50:17.119 [main] DEBUG fileLogger - Get account from Database with accountId 15
+12:50:17.461 [main] DEBUG fileLogger - Get account from Database with accountId 16
+12:50:26.823 [main] DEBUG fileLogger - Get Users by employee from Database
+12:50:29.411 [main] DEBUG fileLogger - Get User from Database
+12:50:29.768 [main] DEBUG fileLogger - Get User from Database
+12:50:30.119 [main] DEBUG fileLogger - Get account from Database with accountId 15
+12:50:30.463 [main] DEBUG fileLogger - Get account from Database with accountId 16
+12:50:37.286 [main] DEBUG fileLogger - Get Users by employee from Database
+12:50:43.115 [main] DEBUG fileLogger - Get Users by employee from Database
+12:56:36.968 [main] DEBUG fileLogger - Get User from Database
+12:57:06.505 [main] DEBUG fileLogger - Get User from Database
+12:58:33.452 [main] DEBUG fileLogger - Get User from Database
+13:08:48.406 [main] DEBUG fileLogger - Get User from Database
+14:50:25.967 [main] DEBUG fileLogger - Get User from Database
+15:15:15.663 [main] DEBUG fileLogger - Get User from Database
+15:16:42.098 [main] DEBUG fileLogger - Get User from Database
+16:02:03.404 [main] DEBUG fileLogger - Get User from Database
+16:21:04.493 [main] DEBUG fileLogger - Get User from Database
+16:21:05.616 [main] DEBUG fileLogger - Get User from Database
+16:21:06.001 [main] DEBUG fileLogger - Get User from Database
+16:21:06.348 [main] DEBUG fileLogger - Get User from Database
+16:21:42.389 [main] DEBUG fileLogger - Get User from Database
+16:21:43.500 [main] DEBUG fileLogger - Get User from Database
+16:21:43.879 [main] DEBUG fileLogger - Get User from Database
+16:21:44.226 [main] DEBUG fileLogger - Get User from Database
+16:22:24.631 [main] DEBUG fileLogger - Get User from Database
+16:22:25.728 [main] DEBUG fileLogger - Get User from Database
+16:22:39.387 [main] DEBUG fileLogger - Get User from Database
+16:22:40.483 [main] DEBUG fileLogger - Get User from Database
+16:22:40.863 [main] DEBUG fileLogger - Get User from Database
+16:22:41.212 [main] DEBUG fileLogger - Get User from Database
+16:24:50.846 [main] DEBUG fileLogger - Get User from Database
+16:24:52.048 [main] DEBUG fileLogger - Get User from Database
+16:24:52.446 [main] DEBUG fileLogger - Get User from Database
+16:24:52.784 [main] DEBUG fileLogger - Get User from Database
+16:25:22.958 [main] DEBUG fileLogger - Get User from Database
+16:25:24.035 [main] DEBUG fileLogger - Get User from Database
+16:25:24.402 [main] DEBUG fileLogger - Get User from Database
+16:25:24.751 [main] DEBUG fileLogger - Get User from Database
+16:26:03.058 [main] DEBUG fileLogger - Get User from Database
+16:26:04.219 [main] DEBUG fileLogger - Get User from Database
+16:26:04.582 [main] DEBUG fileLogger - Get User from Database
+16:26:29.266 [main] DEBUG fileLogger - Get User from Database
+16:52:45.213 [main] DEBUG fileLogger - Get User from Database
+16:52:47.114 [main] DEBUG fileLogger - Get User from Database
+16:54:33.068 [main] DEBUG fileLogger - Get User from Database
+16:54:34.984 [main] DEBUG fileLogger - Get User from Database
+16:55:11.984 [main] DEBUG fileLogger - Get User from Database
+16:55:13.789 [main] DEBUG fileLogger - Get User from Database
+16:55:48.000 [main] DEBUG fileLogger - Get User from Database
+16:55:50.174 [main] DEBUG fileLogger - Get User from Database
+17:00:31.727 [main] DEBUG fileLogger - Get User from Database
+17:00:33.536 [main] DEBUG fileLogger - Get User from Database
+17:01:49.862 [main] DEBUG fileLogger - Get User from Database
+17:01:51.640 [main] DEBUG fileLogger - Get User from Database
+17:19:02.945 [main] DEBUG fileLogger - Get User from Database
+17:19:04.709 [main] DEBUG fileLogger - Get User from Database
+18:08:05.279 [main] DEBUG fileLogger - Get User from Database
+18:08:07.532 [main] DEBUG fileLogger - Get User from Database
+18:24:44.579 [main] DEBUG fileLogger - Get User from Database
+18:24:46.492 [main] DEBUG fileLogger - Get User login from Database
+18:24:46.900 [main] DEBUG fileLogger - Get User from Database
+18:50:54.921 [main] DEBUG fileLogger - Get User login from Database
+18:51:44.108 [main] DEBUG fileLogger - Get User login from Database
+18:54:09.035 [main] DEBUG fileLogger - Get User login from Database
+18:55:11.429 [main] DEBUG fileLogger - Get User login from Database
+18:56:22.125 [main] DEBUG fileLogger - Get User login from Database
+18:56:59.273 [main] DEBUG fileLogger - Get User login from Database
+19:00:26.529 [main] DEBUG fileLogger - Get User login from Database
+19:03:23.378 [main] DEBUG fileLogger - Get User login from Database
+20:25:03.723 [main] DEBUG fileLogger - Add User to Database
+20:25:05.190 [main] ERROR fileLogger - org.postgresql.util.PSQLException: No results were returned by the query.
+20:25:05.191 [main] DEBUG fileLogger - Get User from Database
+20:33:15.288 [main] DEBUG fileLogger - Get User login from Database
+20:33:41.096 [main] DEBUG fileLogger - Get User login from Database
+20:34:20.303 [main] DEBUG fileLogger - Add User to Database
+20:34:20.706 [main] ERROR fileLogger - org.postgresql.util.PSQLException: No results were returned by the query.
+20:34:20.706 [main] DEBUG fileLogger - Get User from Database
+20:34:21.058 [main] DEBUG fileLogger - Get UserLogin from Database
+20:34:21.434 [main] ERROR fileLogger - org.postgresql.util.PSQLException: No results were returned by the query.
+20:56:15.073 [main] DEBUG fileLogger - Get User from Database
+21:02:54.683 [main] DEBUG fileLogger - Update state of user with SSN 221341111 to VA
+21:02:55.975 [main] ERROR fileLogger - org.postgresql.util.PSQLException: No results were returned by the query.
+21:06:33.309 [main] DEBUG fileLogger - Update state of user with SSN 221341111 to VA
+21:06:34.708 [main] ERROR fileLogger - org.postgresql.util.PSQLException: No results were returned by the query.
+21:07:20.539 [main] DEBUG fileLogger - Update state of user with SSN 221341111 to ME
+21:07:21.930 [main] ERROR fileLogger - org.postgresql.util.PSQLException: No results were returned by the query.
+21:11:38.125 [main] DEBUG fileLogger - Add User UserDTO [userId=null, firstName=name, lastName=name2, address=111 addres rd, address2=, city=citytown, state=va, zip=24112, ssn=222113333, email=email@emaail.com] to Database
+21:11:39.518 [main] ERROR fileLogger - org.postgresql.util.PSQLException: No results were returned by the query.
+21:12:29.748 [main] DEBUG fileLogger - Add User UserDTO [userId=null, firstName=name, lastName=name2, address=111 addres rd, address2=, city=citytown, state=va, zip=24112, ssn=222113333, email=email@emaail.com] to Database
+21:12:31.098 [main] ERROR fileLogger - org.postgresql.util.PSQLException: ERROR: duplicate key value violates unique constraint "users_un"
+  Detail: Key (ssn)=(222113333) already exists.
+21:12:47.581 [main] DEBUG fileLogger - Add User UserDTO [userId=null, firstName=name, lastName=name2, address=111 addres rd, address2=, city=citytown, state=va, zip=24112, ssn=111667788, email=email@emaail.com] to Database
+21:12:48.981 [main] ERROR fileLogger - org.postgresql.util.PSQLException: No results were returned by the query.
+21:40:59.678 [main] DEBUG fileLogger - Add User UserDTO [userId=null, firstName=name, lastName=name2, address=111 addres rd, address2=, city=citytown, state=va, zip=24112, ssn=111667788, email=email@emaail.com] to Database
+21:41:01.059 [main] ERROR fileLogger - org.postgresql.util.PSQLException: ERROR: duplicate key value violates unique constraint "users_un"
+  Detail: Key (ssn)=(111667788) already exists.
+21:45:28.317 [main] DEBUG fileLogger - Add User UserDTO [userId=null, firstName=name, lastName=name2, address=111 addres rd, address2=, city=citytown, state=va, zip=24112, ssn=111667788, email=email@emaail.com] to Database
+21:45:29.676 [main] ERROR fileLogger - org.postgresql.util.PSQLException: ERROR: duplicate key value violates unique constraint "users_un"
+  Detail: Key (ssn)=(111667788) already exists.
+21:46:35.589 [main] DEBUG fileLogger - Add User UserDTO [userId=null, firstName=name, lastName=name2, address=111 addres rd, address2=, city=citytown, state=va, zip=24112, ssn=111667788, email=email@emaail.com] to Database
+21:46:36.898 [main] ERROR fileLogger - org.postgresql.util.PSQLException: ERROR: duplicate key value violates unique constraint "users_un"
+  Detail: Key (ssn)=(111667788) already exists.
+22:08:57.769 [main] DEBUG fileLogger - Getting user login with username: uniqueuser and password $K8erboy
+22:08:59.035 [main] DEBUG fileLogger - Get User login  with userloginId: 9
+22:08:59.400 [main] DEBUG fileLogger - Get User login  with userloginId: 9
+22:10:46.734 [main] DEBUG fileLogger - Creating bank account with typeId: 1for userId: 18 with an initial balance of 50.0
+22:10:47.134 [main] DEBUG fileLogger - Creating user account bridge with userId: 18and accountId: 21
+22:10:47.498 [main] ERROR fileLogger - org.postgresql.util.PSQLException: No results were returned by the query.
+22:10:47.500 [main] DEBUG fileLogger - Getting user logins with type Id: 2
+22:10:47.851 [main] DEBUG fileLogger - creating employee assignment with client userId: 18and employee userLogintId: 10
+22:10:48.232 [main] ERROR fileLogger - org.postgresql.util.PSQLException: No results were returned by the query.
+22:16:06.740 [main] DEBUG fileLogger - Getting user login with username: uniqueuser and password $K8erboy
+22:16:08.058 [main] DEBUG fileLogger - Get User login  with userloginId: 9
+22:16:08.417 [main] DEBUG fileLogger - Get User login  with userloginId: 9
+22:17:18.427 [main] DEBUG fileLogger - Getting user login with username: uniqueuser and password $K8erboy
+22:17:19.806 [main] DEBUG fileLogger - Get User login  with userloginId: 9
+22:17:20.172 [main] DEBUG fileLogger - Get User login  with userloginId: 9
+22:20:35.908 [main] DEBUG fileLogger - Get User login  with userloginId: 9
+22:20:36.315 [main] DEBUG fileLogger - Getting user with userId: 18
+22:20:42.995 [main] DEBUG fileLogger - Get User login  with userloginId: 9
+22:20:43.335 [main] DEBUG fileLogger - Get User login  with userloginId: 9
+22:21:04.378 [main] DEBUG fileLogger - Getting user login with username: mremployee and password gobanksgo1
+22:21:05.705 [main] DEBUG fileLogger - Get User login  with userloginId: 6
+22:21:06.085 [main] DEBUG fileLogger - Get User login  with userloginId: 6
+22:21:10.045 [main] DEBUG fileLogger - Get Users assigned to employee 6
+22:21:18.818 [main] DEBUG fileLogger - Getting user with userId: 10
+22:21:24.419 [main] DEBUG fileLogger - Get Users assigned to employee 6
+22:21:24.752 [main] DEBUG fileLogger - Getting user with userId: 10
+22:21:35.782 [main] DEBUG fileLogger - Getting user bank account bridges: 10
+22:21:36.143 [main] DEBUG fileLogger - Getting user bank account bridges: 10
+22:21:36.485 [main] DEBUG fileLogger - Get account from Database with accountId 15
+22:21:36.830 [main] DEBUG fileLogger - Get account from Database with accountId 16
+22:49:53.069 [main] DEBUG fileLogger - Getting user login with username: uniqueuser and password $K8erboy
+22:49:54.398 [main] DEBUG fileLogger - Get User login  with userloginId: 9
+22:49:54.759 [main] DEBUG fileLogger - Get User login  with userloginId: 9
+22:50:10.657 [main] DEBUG fileLogger - Get User login  with userloginId: 9
+22:50:10.987 [main] DEBUG fileLogger - Getting user with userId: 18
+22:50:25.172 [main] DEBUG fileLogger - Update first_name of user with SSN 123456781 to Bobina
+22:50:25.596 [main] ERROR fileLogger - org.postgresql.util.PSQLException: No results were returned by the query.
+22:50:25.597 [main] DEBUG fileLogger - Get User login  with userloginId: 9
+22:50:25.985 [main] DEBUG fileLogger - Get User login  with userloginId: 9
+22:53:46.717 [main] DEBUG fileLogger - Getting user login with username: uniqueuser and password $K8erboy
+22:53:48.018 [main] DEBUG fileLogger - Get User login  with userloginId: 9
+22:53:53.099 [main] DEBUG fileLogger - Get User login  with userloginId: 9
+22:53:53.454 [main] DEBUG fileLogger - Getting user with userId: 18
+22:54:11.796 [main] DEBUG fileLogger - Getting user login with username: uniqueuser and password $K8erboy
+22:54:12.150 [main] DEBUG fileLogger - Get User login  with userloginId: 9
+22:54:14.091 [main] DEBUG fileLogger - Get User login  with userloginId: 9
+22:54:14.461 [main] DEBUG fileLogger - Getting user with userId: 18
+22:54:24.937 [main] DEBUG fileLogger - Update first_name of user with SSN 123456781 to Bonino
+22:54:25.315 [main] ERROR fileLogger - org.postgresql.util.PSQLException: No results were returned by the query.
+22:54:25.315 [main] DEBUG fileLogger - Get User login  with userloginId: 9
+22:55:35.326 [main] DEBUG fileLogger - Getting user login with username: uniqueuser and password $K8erboy
+22:55:36.669 [main] DEBUG fileLogger - Get User login  with userloginId: 9
+22:55:38.535 [main] DEBUG fileLogger - Get User login  with userloginId: 9
+22:55:38.861 [main] DEBUG fileLogger - Getting user with userId: 18
+22:55:48.797 [main] DEBUG fileLogger - Update first_name of user with SSN 123456781 to Bonibo
+22:55:49.159 [main] ERROR fileLogger - org.postgresql.util.PSQLException: No results were returned by the query.
+22:55:49.159 [main] DEBUG fileLogger - Get User login  with userloginId: 9

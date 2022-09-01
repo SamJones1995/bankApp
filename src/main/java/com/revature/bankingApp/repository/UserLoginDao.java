@@ -35,10 +35,17 @@ public class UserLoginDao implements UserLoginDaoInterface {
 		try (Connection connection = ConnectionFactory.getConnection();
 				Statement statement = connection.createStatement();) {
 			ResultSet set = statement.executeQuery(sql);
+			
+			if (set.next()) {
+
+				userLogDto = new UserLoginDTO(set.getInt(1), set.getString(2), set.getString(3), set.getInt(4),
+						set.getInt(5));
+
+			}
 
 		} catch (SQLException e) {
-			e.printStackTrace();
-			consoleLogger.error(e.getMessage());
+			
+//			consoleLogger.error(e.getMessage());
 			fileLogger.error(e.toString());
 		}
 
@@ -72,8 +79,7 @@ public class UserLoginDao implements UserLoginDaoInterface {
 			}
 
 		} catch (SQLException e) {
-			e.printStackTrace();
-			consoleLogger.error(e.getMessage());
+//			consoleLogger.error(e.getMessage());
 			fileLogger.error(e.toString());
 		}
 
@@ -100,8 +106,8 @@ public class UserLoginDao implements UserLoginDaoInterface {
 			}
 
 		} catch (SQLException e) {
-			e.printStackTrace();
-			consoleLogger.error(e.getMessage());
+			
+//			consoleLogger.error(e.getMessage());
 			fileLogger.error(e.toString());
 		}
 
@@ -130,7 +136,7 @@ public class UserLoginDao implements UserLoginDaoInterface {
 
 		} catch (SQLException e) {
 
-			consoleLogger.error(e.getMessage());
+//			consoleLogger.error(e.getMessage());
 			fileLogger.error(e.toString());
 		}
 
@@ -158,7 +164,7 @@ public class UserLoginDao implements UserLoginDaoInterface {
 
 		} catch (SQLException e) {
 
-			consoleLogger.error(e.getMessage());
+//			consoleLogger.error(e.getMessage());
 			fileLogger.error(e.toString());
 		}
 
@@ -186,7 +192,7 @@ public class UserLoginDao implements UserLoginDaoInterface {
 
 		} catch (SQLException e) {
 
-			consoleLogger.error(e.getMessage());
+//			consoleLogger.error(e.getMessage());
 			fileLogger.error(e.toString());
 		}
 
@@ -208,10 +214,17 @@ public class UserLoginDao implements UserLoginDaoInterface {
 		try (Connection connection = ConnectionFactory.getConnection();
 				Statement statement = connection.createStatement();) {
 			ResultSet set = statement.executeQuery(sql);
+			
+			if (set.next()) {
 
+				userLogDto = new UserLoginDTO(set.getInt(1), set.getString(2), set.getString(3), set.getInt(4),
+						set.getInt(5));
+
+			}
+			
 		} catch (SQLException e) {
-			e.printStackTrace();
-			consoleLogger.error(e.getMessage());
+		
+//			consoleLogger.error(e.getMessage());
 			fileLogger.error(e.toString());
 		}
 
@@ -232,12 +245,18 @@ public class UserLoginDao implements UserLoginDaoInterface {
 		try (Connection connection = ConnectionFactory.getConnection();
 				Statement statement = connection.createStatement();) {
 			ResultSet set = statement.executeQuery(sql);
+			
+			if (set.next()) {
 
+				userLogDto = new UserLoginDTO(set.getInt(1), set.getString(2), set.getString(3), set.getInt(4),
+						set.getInt(5));
+
+			}
 
 
 		} catch (SQLException e) {
-			e.printStackTrace();
-			consoleLogger.error(e.getMessage());
+		
+//			consoleLogger.error(e.getMessage());
 			fileLogger.error(e.toString());
 		}
 
@@ -257,12 +276,18 @@ public class UserLoginDao implements UserLoginDaoInterface {
 		try (Connection connection = ConnectionFactory.getConnection();
 				Statement statement = connection.createStatement();) {
 			ResultSet set = statement.executeQuery(sql);
+			
+			if (set.next()) {
 
+				userLogDto = new UserLoginDTO(set.getInt(1), set.getString(2), set.getString(3), set.getInt(4),
+						set.getInt(5));
+
+			}
 
 
 		} catch (SQLException e) {
-			e.printStackTrace();
-			consoleLogger.error(e.getMessage());
+		
+//			consoleLogger.error(e.getMessage());
 			fileLogger.error(e.toString());
 		}
 
@@ -284,7 +309,7 @@ public class UserLoginDao implements UserLoginDaoInterface {
 
 		} catch (SQLException e) {
 
-			consoleLogger.error(e.getMessage());
+//			consoleLogger.error(e.getMessage());
 			fileLogger.error(e.toString());
 		}
 

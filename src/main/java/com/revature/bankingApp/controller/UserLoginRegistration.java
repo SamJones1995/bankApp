@@ -30,12 +30,12 @@ public class UserLoginRegistration {
 		System.out.println("Username confirmed");
 		
 		
-		System.out.println("Please enter password");
+		System.out.println("Please enter password - must have a capital letter, number, special character, and at least 8 characters");
 		
 		password = Util.scanner.next();
 		
 		while (!Validation.isValidPass(password)) {
-			System.out.println("Invalid password please try again");
+			System.out.println("Invalid password please try again - must have a capital letter, number, special character, and at least 8 characters");
 			password = Util.scanner.next();
 		}
 		

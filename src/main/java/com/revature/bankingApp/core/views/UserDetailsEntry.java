@@ -144,10 +144,13 @@ public class UserDetailsEntry {
 
 			System.out.println(
 					"Please enter CONFIRM with the following information is correct. Or enter CANCEL to try again");
+			
+			if (address2 == null) {
+				address2 = " ";
+			}
 
-			System.out.println(firstName + " " + lastName);
-			System.out.println(address + " " + address2);
-			System.out.println(city + " " + state + " " + zip);
+			System.out.println("Name: " + firstName + " " + lastName);
+			System.out.println("Address: " + address + " " + address2 + " " + city + " " + state + " " + zip);
 			System.out.println("SSN: " + ssn);
 			System.out.println("Email: " + email);
 

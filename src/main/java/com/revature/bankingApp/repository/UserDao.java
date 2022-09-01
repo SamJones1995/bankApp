@@ -39,7 +39,7 @@ public class UserDao implements UserDaoInterface {
 
 		} catch (SQLException e) {
 
-			consoleLogger.error(e.getMessage());
+//			consoleLogger.error(e.getMessage());
 			fileLogger.error(e.toString());
 		}
 
@@ -64,7 +64,7 @@ public class UserDao implements UserDaoInterface {
 			}
 
 		} catch (SQLException e) {
-			consoleLogger.error(e.getMessage());
+//			consoleLogger.error(e.getMessage());
 			fileLogger.error(e.toString());
 		}
 
@@ -89,7 +89,7 @@ public class UserDao implements UserDaoInterface {
 			}
 
 		} catch (SQLException e) {
-			consoleLogger.error(e.getMessage());
+//			consoleLogger.error(e.getMessage());
 			fileLogger.error(e.toString());
 		}
 
@@ -113,8 +113,8 @@ public class UserDao implements UserDaoInterface {
 			}
 
 		} catch (SQLException e) {
-			// TODO Auto-generated catch block
-			consoleLogger.error(e.getMessage());
+		
+//			consoleLogger.error(e.getMessage());
 			fileLogger.error(e.toString());
 		}
 
@@ -161,7 +161,7 @@ public class UserDao implements UserDaoInterface {
 				ResultSet set = statement.executeQuery(sql);
 
 		} catch (SQLException e) {
-			consoleLogger.error(e.getMessage());
+//			consoleLogger.error(e.getMessage());
 			UserDao.fileLogger.error(e.toString());
 		}
 

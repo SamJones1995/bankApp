@@ -16,7 +16,7 @@ public class TransactionMenu {
 		
 		AccountDao aDao = new AccountDao();
 		Integer userType = uDto.getUserTypeId();
-		System.out.println(uDto.toString());
+		
 		
 		
 		System.out.println("Please enter the corresponding number to the below options");
@@ -52,7 +52,7 @@ public class TransactionMenu {
 				TransactionMenu.transactionMenu(uDto);
 			}
 			
-			System.out.println("You wish to withdraw " + amountToWithdraw + "from account number " + accountToWithdraw + "?");
+			System.out.println("You wish to withdraw " + amountToWithdraw + " from account number " + accountToWithdraw + "?");
 			System.out.println("Enter CONFIRM to continue or enter CANCEL");
 			
 			String entry2 = Util.scanner.next();

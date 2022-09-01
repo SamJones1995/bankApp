@@ -47,8 +47,8 @@ public class EmployeeAssignmentDao implements EmployeeAssignmentDaoInterface {
 			consoleLogger.info(eDto.toString());
 
 		} catch (SQLException e) {
-			e.printStackTrace();
-			consoleLogger.error(e.getMessage());
+		
+//			consoleLogger.error(e.getMessage());
 			fileLogger.error(e.toString());
 		}
 
@@ -72,8 +72,8 @@ public class EmployeeAssignmentDao implements EmployeeAssignmentDaoInterface {
 			}
 
 		} catch (SQLException e) {
-			// TODO Auto-generated catch block
-			consoleLogger.error(e.getMessage());
+			
+//			consoleLogger.error(e.getMessage());
 			fileLogger.error(e.toString());
 		}
 
@@ -94,8 +94,8 @@ public class EmployeeAssignmentDao implements EmployeeAssignmentDaoInterface {
 			ResultSet set = statement.executeQuery(sql);
 
 		} catch (SQLException e) {
-			// TODO Auto-generated catch block
-			consoleLogger.error(e.getMessage());
+			
+//			consoleLogger.error(e.getMessage());
 			fileLogger.error(e.toString());
 		}
 
@@ -120,7 +120,7 @@ public class EmployeeAssignmentDao implements EmployeeAssignmentDaoInterface {
 
 		} catch (SQLException e) {
 
-			consoleLogger.error(e.getMessage());
+//			consoleLogger.error(e.getMessage());
 			fileLogger.error(e.toString());
 		}
 

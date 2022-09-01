@@ -40,10 +40,8 @@ public class AccountDao implements AccountDaoInterface {
 
 			uDao.createUserAccountBridge(userId, aDto.getAccountId());
 
-			consoleLogger.info(aDto.toString());
-
 		} catch (SQLException e) {
-			consoleLogger.error(e.getMessage());
+//			consoleLogger.error(e.getMessage());
 			fileLogger.error(e.toString());
 		}
 
@@ -69,7 +67,7 @@ public class AccountDao implements AccountDaoInterface {
 
 		} catch (SQLException e) {
 
-			consoleLogger.error(e.getMessage());
+//			consoleLogger.error(e.getMessage());
 			fileLogger.error(e.toString());
 		}
 
@@ -96,11 +94,11 @@ public class AccountDao implements AccountDaoInterface {
 
 		} catch (SQLException e) {
 
-			consoleLogger.error(e.getMessage());
+//			consoleLogger.error(e.getMessage());
 			fileLogger.error(e.toString());
 		}
 
-		System.out.println(aDto.getBalance());
+		System.out.println("New balance: " + aDto.getBalance());
 
 	}
 
@@ -122,12 +120,12 @@ public class AccountDao implements AccountDaoInterface {
 			ResultSet set = statement.executeQuery(sql);
 
 		} catch (SQLException e) {
-
-			consoleLogger.error(e.getMessage());
+//
+//			consoleLogger.error(e.getMessage());
 			fileLogger.error(e.toString());
 		}
 
-		System.out.println(aDto.getBalance());
+		System.out.println("New balance: " + aDto.getBalance());
 
 	}
 
@@ -150,11 +148,11 @@ public class AccountDao implements AccountDaoInterface {
 
 		} catch (SQLException e) {
 
-			consoleLogger.error(e.getMessage());
+//			consoleLogger.error(e.getMessage());
 			fileLogger.error(e.toString());
 		}
 
-		System.out.println(aDto.getBalance());
+		System.out.println("New balance: " +aDto.getBalance());
 	}
 
 	@Override
@@ -170,7 +168,7 @@ public class AccountDao implements AccountDaoInterface {
 
 		} catch (SQLException e) {
 
-			consoleLogger.error(e.getMessage());
+//			consoleLogger.error(e.getMessage());
 			fileLogger.error(e.toString());
 		}
 
@@ -216,8 +214,8 @@ public class AccountDao implements AccountDaoInterface {
 			consoleLogger.info(aDto.toString());
 
 		} catch (SQLException e) {
-			e.printStackTrace();
-			consoleLogger.error(e.getMessage());
+		
+//			consoleLogger.error(e.getMessage());
 			fileLogger.error(e.toString());
 		}
 
@@ -241,8 +239,8 @@ public class AccountDao implements AccountDaoInterface {
 			ResultSet set = statement.executeQuery(sql);
 
 		} catch (SQLException e) {
-			// TODO Auto-generated catch block
-			consoleLogger.error(e.getMessage());
+		
+//			consoleLogger.error(e.getMessage());
 			fileLogger.error(e.toString());
 		}
 
@@ -266,8 +264,8 @@ public class AccountDao implements AccountDaoInterface {
 			ResultSet set = statement.executeQuery(sql);
 
 		} catch (SQLException e) {
-			// TODO Auto-generated catch block
-			consoleLogger.error(e.getMessage());
+		
+//			consoleLogger.error(e.getMessage());
 			fileLogger.error(e.toString());
 		}
 

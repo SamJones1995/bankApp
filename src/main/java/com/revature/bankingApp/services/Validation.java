@@ -39,7 +39,7 @@ public class Validation {
 		 	
 	        Pattern pattern = Pattern.compile(regexPassword);
 	        Matcher matcher = pattern.matcher(password);
-	        return matcher.matches();
+	        return matcher.find();
 	    }
 
 

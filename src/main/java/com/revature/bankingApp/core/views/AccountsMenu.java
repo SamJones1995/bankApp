@@ -24,8 +24,6 @@ public class AccountsMenu {
 			
 			ArrayList<Integer> accountIds = uDao.getUserAccountBridge(userId);
 			
-			System.out.println(accountIds);
-			
 			for (int i = 0; i < accountIds.size(); i++) {
 				AccountDTO aDto = aDao.getAccount(accountIds.get(i));
 
@@ -54,7 +52,7 @@ public class AccountsMenu {
 					UserMenu.Menu(userId);
 				} catch (UserNotFoundException e) {
 					// TODO Auto-generated catch block
-					e.printStackTrace();
+					System.out.println("User not found");
 				}
 			}
 			
@@ -64,12 +62,10 @@ public class AccountsMenu {
 		
 		if (entry.equals(2)) {
 			try {
-				CreateBankAccountService.createBankAccount(userId);
+				CreateBankAccountService.createBankAccount(userId, userLoginId);
 			} catch (UserNotFoundException e) {
-				// TODO Auto-generated catch block
-				e.printStackTrace();
+				System.out.println("User not found");
 			}
-//			UserDetailsEntry.newUserSetup(userId);
 			
 		}
 		

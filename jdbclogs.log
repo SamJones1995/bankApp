@@ -918,3 +918,71 @@
 22:55:48.797 [main] DEBUG fileLogger - Update first_name of user with SSN 123456781 to Bonibo
 22:55:49.159 [main] ERROR fileLogger - org.postgresql.util.PSQLException: No results were returned by the query.
 22:55:49.159 [main] DEBUG fileLogger - Get User login  with userloginId: 9
+23:46:38.905 [main] DEBUG fileLogger - Getting user bank account bridges: 18
+23:46:39.402 [main] DEBUG fileLogger - Get account from Database with accountId 17
+23:46:39.744 [main] DEBUG fileLogger - Get account from Database with accountId 18
+23:46:40.093 [main] DEBUG fileLogger - Get account from Database with accountId 19
+23:46:40.440 [main] DEBUG fileLogger - Get account from Database with accountId 20
+23:46:40.782 [main] DEBUG fileLogger - Get account from Database with accountId 21
+23:46:43.775 [main] DEBUG fileLogger - Get User login  with userloginId: 9
+23:46:59.144 [main] DEBUG fileLogger - Getting user bank account bridges: 18
+23:47:01.844 [main] DEBUG fileLogger - Get account from Database with accountId 18
+23:47:09.224 [main] DEBUG fileLogger - Removing 50.0 from account balance: 18and adding to 19
+23:47:09.224 [main] DEBUG fileLogger - Get account from Database with accountId 19
+23:47:09.604 [main] DEBUG fileLogger - Subtracting 50.0from accountId: 18
+23:47:09.605 [main] DEBUG fileLogger - Get account from Database with accountId 18
+23:47:10.273 [main] ERROR fileLogger - org.postgresql.util.PSQLException: No results were returned by the query.
+23:47:10.620 [main] ERROR fileLogger - org.postgresql.util.PSQLException: No results were returned by the query.
+23:54:59.627 [main] DEBUG fileLogger - Getting user login with username: uniqueuser and password $K8erboy
+23:55:00.964 [main] DEBUG fileLogger - Get User login  with userloginId: 9
+23:55:04.709 [main] DEBUG fileLogger - Getting user bank account bridges: 18
+23:55:05.052 [main] DEBUG fileLogger - Get account from Database with accountId 17
+23:55:05.398 [main] DEBUG fileLogger - Get account from Database with accountId 18
+23:55:05.760 [main] DEBUG fileLogger - Get account from Database with accountId 19
+23:55:06.125 [main] DEBUG fileLogger - Get account from Database with accountId 20
+23:55:06.498 [main] DEBUG fileLogger - Get account from Database with accountId 21
+23:55:09.384 [main] DEBUG fileLogger - Get User login  with userloginId: 9
+23:55:14.786 [main] DEBUG fileLogger - Get account from Database with accountId 17
+23:55:15.111 [main] DEBUG fileLogger - Getting user bank account bridges: 18
+00:32:04.297 [main] DEBUG fileLogger - Get account from Database with accountId 17
+00:32:07.784 [main] DEBUG fileLogger - Subtracting 20.0from accountId: 17
+00:32:07.784 [main] DEBUG fileLogger - Get account from Database with accountId 17
+00:32:08.470 [main] ERROR fileLogger - org.postgresql.util.PSQLException: No results were returned by the query.
+00:41:22.003 [main] DEBUG fileLogger - Getting user login with username: uniqueuser and password $K8erboy
+00:41:23.442 [main] DEBUG fileLogger - Get User login  with userloginId: 9
+00:41:28.951 [main] DEBUG fileLogger - Getting user bank account bridges: 18
+00:41:29.288 [main] DEBUG fileLogger - Get account from Database with accountId 17
+00:41:29.626 [main] DEBUG fileLogger - Get account from Database with accountId 18
+00:41:29.988 [main] DEBUG fileLogger - Get account from Database with accountId 19
+00:41:30.362 [main] DEBUG fileLogger - Get account from Database with accountId 20
+00:41:30.727 [main] DEBUG fileLogger - Get account from Database with accountId 21
+00:44:02.109 [main] DEBUG fileLogger - Get User login  with userloginId: 9
+00:44:11.628 [main] DEBUG fileLogger - Get account from Database with accountId 20
+00:44:11.956 [main] DEBUG fileLogger - Getting user bank account bridges: 18
+00:44:17.612 [main] DEBUG fileLogger - Get account from Database with accountId 20
+00:44:36.603 [main] DEBUG fileLogger - Subtracting 5.0from accountId: 20
+00:44:36.603 [main] DEBUG fileLogger - Get account from Database with accountId 20
+00:44:37.311 [main] ERROR fileLogger - org.postgresql.util.PSQLException: No results were returned by the query.
+00:44:49.517 [main] DEBUG fileLogger - Get User login  with userloginId: 9
+00:44:52.961 [main] DEBUG fileLogger - Get User login  with userloginId: 9
+00:44:53.306 [main] DEBUG fileLogger - Getting user with userId: 18
+00:48:24.352 [main] DEBUG fileLogger - Update city of user with SSN 123456781 to VA
+00:48:24.714 [main] ERROR fileLogger - org.postgresql.util.PSQLException: No results were returned by the query.
+00:48:24.714 [main] DEBUG fileLogger - Get User login  with userloginId: 9
+00:56:19.160 [main] DEBUG fileLogger - Add User UserLoginDTO [userLoginId=null, username=bababoi, password=Whurd90$, userId=null, userTypeId=1] to Database
+00:56:20.564 [main] ERROR fileLogger - org.postgresql.util.PSQLException: No results were returned by the query.
+00:58:31.999 [main] DEBUG fileLogger - Getting user login with username: bababoi and password Whurd90$
+00:58:32.411 [main] DEBUG fileLogger - Get User login  with userloginId: 11
+00:59:45.464 [main] DEBUG fileLogger - Getting user login with username: bababoi and password Whurd90$
+00:59:45.839 [main] DEBUG fileLogger - Get User login  with userloginId: 11
+01:03:16.453 [main] DEBUG fileLogger - Add User UserDTO [userId=null, firstName=Baba, lastName=Boiie, address=111 baba rd, address2=null, city=Babatropolis, state=BA, zip=24112, ssn=224513322, email=email@email.com] to Database
+01:03:16.848 [main] ERROR fileLogger - org.postgresql.util.PSQLException: No results were returned by the query.
+01:03:16.848 [main] DEBUG fileLogger - Getting user with SSN: 224513322
+01:03:17.205 [main] DEBUG fileLogger - Update user_id of userLogin with userLoginId: 11 to 27
+01:03:17.559 [main] ERROR fileLogger - org.postgresql.util.PSQLException: No results were returned by the query.
+01:03:17.559 [main] DEBUG fileLogger - Get User login  with userloginId: 11
+01:05:25.739 [main] DEBUG fileLogger - Get User login  with userloginId: 11
+01:05:26.098 [main] DEBUG fileLogger - Getting user with userId: 27
+01:05:42.389 [main] DEBUG fileLogger - Update city of user with SSN 224513322 to Babatown
+01:05:42.729 [main] ERROR fileLogger - org.postgresql.util.PSQLException: No results were returned by the query.
+01:05:42.730 [main] DEBUG fileLogger - Get User login  with userloginId: 11

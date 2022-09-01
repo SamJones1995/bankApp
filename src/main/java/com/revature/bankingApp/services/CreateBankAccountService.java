@@ -9,7 +9,7 @@ import com.revature.bankingApp.repository.exceptions.UserNotFoundException;
 
 public class CreateBankAccountService {
 	
-	public static void createBankAccount(Integer userId) throws UserNotFoundException {
+	public static void createBankAccount(Integer userId, Integer userLoginId) throws UserNotFoundException {
 		
 		String checking = "Checking";
 		String savings = "Savings";
@@ -46,12 +46,12 @@ public class CreateBankAccountService {
 			if (entry.equals("CONFIRM")) {
 				
 				AccountDao.createAccount(userId, balance, accountType);
-				UserMenu.Menu(userId);
+				UserMenu.Menu(userLoginId);
 				
 			}
 			if (entry.equals("CANCEL")) {
 				
-				UserMenu.Menu(userId);
+				UserMenu.Menu(userLoginId);
 				
 				
 			}

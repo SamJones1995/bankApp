@@ -67,18 +67,18 @@ constraint user_login_id
 	foreign key(user_login_id)
 		references user_login(user_login_id)
 
-INSERT INTO users (first_name,name,address,address2,city,state,zip,ssn,email)
+INSERT INTO users (first_name,last_name ,address,address2,city,state,zip,ssn,email)
 VALUES
-  ('Aiko','Juarez','9767 Aliquam St.','egestas hendrerit','Neustadt am Rübenberge','WY','857477',585541995,'aliquet.nec@outlook.com'),
-  ('Abigail','Steele','P.O. Box 785, 4464 Vitae, Road','ante ipsum','Antártica','TN','A6K 0K1',71044936,'ultrices.duis.volutpat@yahoo.net'),
-  ('Callie','Hopper','560-6335 Mi. Rd.','accumsan sed,','Dublin','IL','15142',601299776,'vehicula.aliquet@google.com'),
-  ('Priscilla','Bailey','2819 Nulla St.','amet ultricies sem','Nova Kakhovka','OH','11-438',710298924,'fermentum.arcu@hotmail.edu'),
-  ('Bree','Cooley','P.O. Box 410, 8449 Enim. Road','tempus scelerisque,','Sabadell','NE','22727',218575729,'mi.lacinia.mattis@protonmail.ca'),
-  ('Sharon','Harvey','Ap #430-997 Mollis Ave','gravida sagittis.','Izmail','TN','615354',480462878,'ligula.elit.pretium@icloud.org'),
-  ('Len','Michael','Ap #737-9083 In Rd.','arcu. Sed et','Châlons-en-Champagne','OR','36294',568003469,'nibh.sit@icloud.couk'),
-  ('Emma','Morgan','P.O. Box 130, 5131 Magna. St.','Proin','Karak','MS','51-54',861004497,'fermentum.metus@outlook.ca'),
-  ('Paula','Price','P.O. Box 742, 8258 Facilisis Avenue','rutrum. Fusce','Sabanalarga','FL','9620',920719700,'diam.proin@yahoo.edu'),
-  ('Maryam','Holt','P.O. Box 171, 6074 Ac Av.','nibh','Mokpo','HI','5742',546465603,'eget@icloud.com');
+  ('Aiko','Juarez','9767 Aliquam St.','egestas hendrerit','Neustadt am Rübenberge','WY',857477,585541995,'aliquet.nec@outlook.com'),
+  ('Abigail','Steele','P.O. Box 785, 4464 Vitae, Road','ante ipsum','Antártica','TN',23112,71044936,'ultrices.duis.volutpat@yahoo.net'),
+  ('Callie','Hopper','560-6335 Mi. Rd.','accumsan sed,','Dublin','IL',15142,601299776,'vehicula.aliquet@google.com'),
+  ('Priscilla','Bailey','2819 Nulla St.','amet ultricies sem','Nova Kakhovka','OH',23112,710298924,'fermentum.arcu@hotmail.edu'),
+  ('Bree','Cooley','P.O. Box 410, 8449 Enim. Road','tempus scelerisque,','Sabadell','NE',22727,218575729,'mi.lacinia.mattis@protonmail.ca'),
+  ('Sharon','Harvey','Ap #430-997 Mollis Ave','gravida sagittis.','Izmail','TN',615354,480462878,'ligula.elit.pretium@icloud.org'),
+  ('Len','Michael','Ap #737-9083 In Rd.','arcu. Sed et','Châlons-en-Champagne','OR',36294,568003469,'nibh.sit@icloud.couk'),
+  ('Emma','Morgan','P.O. Box 130, 5131 Magna. St.','Proin','Karak','MS',34221,861004497,'fermentum.metus@outlook.ca'),
+  ('Paula','Price','P.O. Box 742, 8258 Facilisis Avenue','rutrum. Fusce','Sabanalarga','FL',43221,920719700,'diam.proin@yahoo.edu'),
+  ('Maryam','Holt','P.O. Box 171, 6074 Ac Av.','nibh','Mokpo','HI',13221,546465603,'eget@icloud.com');
  
 insert into user_types (user_type_name)
 values ('Customer', 'Employee', 'Admin');

@@ -24,7 +24,6 @@ public class UserMenu {
 			EmployeeMenu.employeeMenu(uDto2);
 		}
 		if (userId == 0) {
-			System.out.println("Please enter personal information");
 			UserDetailsEntry uD = new UserDetailsEntry();
 			uD.newUserSetup(userLoginId);
 			
@@ -44,15 +43,11 @@ public class UserMenu {
 			if (entry.equals("2")) {
 				UserDTO uDto = UserDao.getUserById(UserLoginDao.getUserLoginById(userLoginId).getUserId());
 				
-				System.out.println(uDto.getFirstName());
-				System.out.println(uDto.getLastName());
-				System.out.println(uDto.getAddress());
-				System.out.println(uDto.getAddress2());
-				System.out.println(uDto.getCity());
-				System.out.println(uDto.getState());
-				System.out.println(uDto.getZip());
-				System.out.println(uDto.getSsn());
-				System.out.println(uDto.getEmail());
+				System.out.println("Name: " + uDto.getFirstName() + " " + uDto.getLastName());
+				System.out.println("Address: " + uDto.getAddress() + " " + uDto.getAddress2() + " " + uDto.getCity() + " " + uDto.getState() + " " + uDto.getZip());
+
+				System.out.println("SSN: " + uDto.getSsn());
+				System.out.println("Email: " + uDto.getEmail());
 				
 				Util.scanner.nextLine();
 				System.out.println("Would you like to update your information? Enter YES to update and NO to return to menu");
@@ -157,8 +152,8 @@ public class UserMenu {
 						}
 						
 						
-						UserDao.updateUser(uDto.getSsn(), "city", state);
-						System.out.println("City now: " + state);
+						UserDao.updateUser(uDto.getSsn(), "state", state);
+						System.out.println("State now: " + state);
 						UserMenu.Menu(userLoginId);
 					}
 					
@@ -172,8 +167,8 @@ public class UserMenu {
 
 						}
 						
-						UserDao.updateUser(uDto.getSsn(), "city", Integer.valueOf(zip));
-						System.out.println("City now: " + zip);
+						UserDao.updateUser(uDto.getSsn(), "zip", Integer.valueOf(zip));
+						System.out.println("Zip now: " + zip);
 						UserMenu.Menu(userLoginId);
 					}
 					
@@ -186,8 +181,8 @@ public class UserMenu {
 
 						}
 						
-						UserDao.updateUser(uDto.getSsn(), "city", email);
-						System.out.println("City now: " + email);
+						UserDao.updateUser(uDto.getSsn(), "email", email);
+						System.out.println("Email now: " + email);
 						UserMenu.Menu(userLoginId);
 					}
 					
@@ -196,6 +191,7 @@ public class UserMenu {
 				}
 				
 				if (entry2.equals("NO")) {
+					System.out.println("Thank you for using RevBank");
 					UserMenu.Menu(userLoginId);
 				}
 				
